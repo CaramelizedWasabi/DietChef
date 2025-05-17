@@ -3,7 +3,7 @@
 
 /* 헤더 전체 영역 */
 .diet-header {
-  height: 15vh; /* 화면 높이의 15% */
+  height: 80px; 
   display: flex; /* 가로 정렬 */
   justify-content: space-between; /* 좌우로 정렬 */
   align-items: center; /* 수직 가운데 정렬 */
@@ -13,7 +13,7 @@
 
 /* 로고 이미지 스타일 */
 .logo {
-  height: 55%; /* 헤더 높이에 비례한 크기 */
+  height: 40px; 
   object-fit: contain; /* 이미지 비율 유지 */
 }
 

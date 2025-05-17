@@ -7,10 +7,12 @@
 */
 
 import React, { useState } from 'react'; // React와 useState 훅 임포트
+import { useNavigate } from 'react-router-dom'; //react-router-dom에서 useNavigate 불러오기
 import './DietHeader.css'; // 스타일시트 연결
 import logo from '../assets/images/logo.png'; // 로고 이미지 파일 불러오기
 import userIcon from '../assets/images/userpage.png'; // 사용자 아이콘 이미지
 import MyPageModal from './MyPageModal'; // 마이페이지 모달 컴포넌트 불러오기
+
 
 // DietHeader 함수형 컴포넌트 정의
 const DietHeader = () => {
@@ -20,9 +22,12 @@ const DietHeader = () => {
   // 마이페이지 모달을 열지 닫을지 결정하는 state
   const [showMyPageModal, setShowMyPageModal] = useState(false);
 
+  const navigate = useNavigate();
+
   // 탭 버튼 클릭 시 해당 탭을 활성화 상태로 설정
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab, path) => {
     setActiveTab(tab);
+    navigate(path);
   };
 
   // 마이페이지 아이콘 클릭 시 모달 열고 탭을 'myPage'로 설정
@@ -50,7 +55,7 @@ const DietHeader = () => {
             // className: 기본 스타일은 'nav-tab', 선택된 탭일 경우 'active' 클래스 추가
             className={`nav-tab ${activeTab === 'diet' ? 'active' : ''}`}
             // 클릭 시 handleTabClick 함수 실행, 'diet' 탭으로 설정
-            onClick={() => handleTabClick('diet')}
+            onClick={() => handleTabClick('diet', '/dietpage')}
           >
             Diet
           </button>
@@ -58,7 +63,7 @@ const DietHeader = () => {
           {/* Nutrition 탭 버튼 */}
           <button
             className={`nav-tab ${activeTab === 'nutrition' ? 'active' : ''}`}
-            onClick={() => handleTabClick('nutrition')}
+            onClick={() => handleTabClick('nutrition', '/nutrition')}
           >
             Nutrition
           </button>
@@ -66,7 +71,7 @@ const DietHeader = () => {
           {/* Food Info 탭 버튼 */}
           <button
             className={`nav-tab ${activeTab === 'foodInfo' ? 'active' : ''}`}
-            onClick={() => handleTabClick('foodInfo')}
+            onClick={() => handleTabClick('foodInfo', '/foodinfo')}
           >
             Food Info
           </button>
@@ -74,24 +79,20 @@ const DietHeader = () => {
           {/* Progress 탭 버튼 */}
           <button
             className={`nav-tab ${activeTab === 'progress' ? 'active' : ''}`}
-            onClick={() => handleTabClick('progress')}
+            onClick={() => handleTabClick('progress', '/progress')}
           >
             Progress
           </button>
 
           {/* 사용자 아이콘 버튼 (My Page) */}
-          <button
-            className="user-icon-button"
-            onClick={handleMyPageClick} // 클릭 시 마이페이지 모달 열기
-          >
-            {/* 사용자 이미지 */}
+          <button className="user-icon-button" onClick={() => { setActiveTab('myPage'); setShowMyPageModal(true); }}>
             <img src={userIcon} alt="MyPage" className="user-icon-img" />
           </button>
         </div>
       </header>
 
-      {/* 마이페이지 모달 표시 여부에 따라 조건부 렌더링 */}
-      {showMyPageModal && <MyPageModal onClose={handleCloseModal} />}
+      {showMyPageModal && <MyPageModal onClose={() => setShowMyPageModal(false)} />}
+
     </>
   );
 };

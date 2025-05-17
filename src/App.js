@@ -14,6 +14,8 @@ import CompleteProfile from './pages/CompleteProfile'; // 프로필 작성 페�
 import SurveyPage from './pages/SurveyPage'; // 설문 페이지
 import DietPage from './pages/DietPage'; // 다이어트 페이지
 import { getAuth, onAuthStateChanged } from 'firebase/auth'; // Firebase 인증 관련 함수들
+import Nutrition from './pages/Nutrition'; //Nutrition main page
+import DietHeader from './components/DietHeader'; //Test 겸용 DietHeader
 
 function App() {
   // 모달 상태 관리 (각 모달의 열림/닫힘 상태)
@@ -120,6 +122,13 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
+          {/* 인증 제거한 개발 확인 용 (하단) */}
+          <Route path="/nutrition" element={
+            <>
+               <DietHeader />
+               <Nutrition />
+            </>
+          } />
           {/* 기본 페이지 (메인 페이지) */}
           <Route path="/" element={<MainPage />} />
           {/* 인증이 필요한 페이지들 (ProtectedRoute로 감싸서 인증된 사용자만 접근 가능) */}
@@ -127,7 +136,7 @@ function App() {
             path="/complete-profile" 
             element={
               <ProtectedRoute requireAuth={true}>
-                <CompleteProfile /> {/* 프로필 작성 페이지 */}
+                <CompleteProfile /> 
               </ProtectedRoute>
             } 
           />
@@ -135,7 +144,7 @@ function App() {
             path="/survey" 
             element={
               <ProtectedRoute requireAuth={true}>
-                <SurveyPage /> {/* 설문 페이지 */}
+                <SurveyPage /> 
               </ProtectedRoute>
             } 
           />
@@ -143,14 +152,25 @@ function App() {
             path="/dietpage" 
             element={
               <ProtectedRoute requireAuth={true}>
-                <DietPage /> {/* 다이어트 페이지 */}
+                <DietPage /> 
               </ProtectedRoute>
             } 
           />
           {/* 성공 페이지로 리다이렉트 (다이어트 페이지로 이동) */}
           <Route path="/success" element={<Navigate to="/dietpage" replace />} />
-          {/* 알 수 없는 경로로 접근 시 홈 페이지로 리다이렉트 */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* 알 수 없는 경로로 접근 시 홈 페이지로 리다이렉트*/}
+          <Route path="*" element={<Navigate to="/" replace />} /> 
+          {/* 
+          <Route 
+           path="/nutrition" 
+           element={
+             <ProtectedRoute requireAuth={true}>
+               <Nutrition />
+             </ProtectedRoute>
+            } 
+          /> 
+          */} 
+          {/*로그인 기능 연동 시 상단 Nutrition 코드 사용할 것*/}
         </Routes>
       </div>
     </Router>
