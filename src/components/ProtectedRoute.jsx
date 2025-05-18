@@ -20,54 +20,43 @@ const ProtectedRoute = ({
   requireSurvey = false, 
 }) => {
   // 상태 관리
-  const [isLoading, setIsLoading] = useState(true); // 로딩 여부
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // 로그인 상태
+  const [isAuthenticated, setIsAuthenticated] = useState(null); // 초기값 false → null 
   const [userProgress, setUserProgress] = useState({
     profileCompleted: false, // 프로필 작성 완료 여부
     surveyCompleted: false   // 설문 작성 완료 여부
   });
+  const [authChecked, setAuthChecked] = useState(false);
 
-  // 컴포넌트 마운트 시 사용자 인증 상태 확인
   useEffect(() => {
-    const auth = getAuth(); // Firebase 인증 객체 가져오기
-
-    // Firebase 인증 상태 변경 리스너 등록
+    const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        // 사용자가 로그인한 경우
         setIsAuthenticated(true);
-
         try {
-          // 사용자 진행 상태 (프로필 및 설문) 가져오기
           const progress = await checkUserProgress(user.uid);
-          if (progress) {
-            setUserProgress(progress); // 상태 저장
-          }
+          if (progress) setUserProgress(progress);
         } catch (error) {
-          console.error("사용자 상태 확인 오류:", error); // 에러 로그 출력
+          console.error("User status verification error:", error);
         }
       } else {
-        // 로그인하지 않은 경우
         setIsAuthenticated(false);
       }
-
-      // 로딩 종료
-      setIsLoading(false);
+      setAuthChecked(true); // 인증 확인 완료
     });
-
-    // 컴포넌트 언마운트 시 리스너 제거
+  
     return () => unsubscribe();
   }, []);
 
   // 로딩 중일 때 화면에 표시할 내용
-  if (isLoading) {
+  if (!authChecked) {
     return <div className="loading-container">Loading...</div>;
   }
-
-  // 로그인 필요하지만 로그인하지 않은 경우, 홈으로 리디렉션
-  if (requireLogin && !isAuthenticated) {
-    return <Navigate to="/" />;
+  
+  // 로그인 안 된 경우
+  if (!isAuthenticated) {
+    return requireLogin ? <Navigate to="/" /> : null;
   }
+  
 
   // 프로필 작성 완료가 필요한데 완료하지 않은 경우, 프로필 작성 페이지로 이동
   if (requireProfile && !userProgress.profileCompleted) {
