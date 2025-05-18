@@ -1,47 +1,48 @@
+// src/pages/Nutrition.jsx
+
 import React, { useState, useEffect } from 'react';
-import { getAuth } from 'firebase/auth'; //firebase 인증
-import { getFirestore, doc, getDoc } from 'firebase/firestore'; //Firebase Firestore
+import { getAuth } from 'firebase/auth';
+import { getDatabase, ref, get, child } from 'firebase/database'; // Realtime Database
 
 const Nutrition = () => {
   const [calories, setCalories] = useState(0);
   const [carbs, setCarbs] = useState(0);
   const [protein, setProtein] = useState(0);
 
-  // Firebase에서 사용자 영양 정보 불러옴
   useEffect(() => {
     const fetchUserNutrition = async () => {
-      const auth = getAuth(); // 현재 로그인된 사용자 정보
+      const auth = getAuth();
       const user = auth.currentUser;
       if (!user) return;
-  
-      const db = getFirestore();
-      const userDocRef = doc(db, 'users', user.uid);
-  
-      try {
-        const docSnap = await getDoc(userDocRef);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          const { height, weight, gender } = data;
-          const age = 22; // 예시 나이
 
-          const cal = gender === 'male'
-            ? Math.round(66 + 13.7 * weight + 5 * height - 6.8 * age)
-            : Math.round(655 + 9.6 * weight + 1.8 * height - 4.7 * age);
+      const db = getDatabase(); // Realtime DB 사용
+      const userRef = ref(db, `users/${user.uid}/survey`); // 경로: users/{uid}/survey
+
+      try {
+        const snapshot = await get(userRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          const { height, weight, gender } = data;
+          const age = 22; // 나중에 생일에서 계산 가능
+
+          const cal =
+            gender === 'male'
+              ? Math.round(66 + 13.7 * weight + 5 * height - 6.8 * age)
+              : Math.round(655 + 9.6 * weight + 1.8 * height - 4.7 * age);
 
           setCalories(cal);
           setCarbs(Math.round((cal * 0.5) / 4));
           setProtein(Math.round(weight * 1.2));
         } else {
-          console.warn('User document does not exist.');
+          console.warn('No nutrition data found');
         }
       } catch (error) {
-        console.error('Failed to load user data:', error);
+        console.error('Failed to load data from Realtime DB:', error);
       }
     };
-  
+
     fetchUserNutrition();
   }, []);
-  
 
   return (
     <div style={styles.page}>
@@ -52,7 +53,7 @@ const Nutrition = () => {
         <p>Carbohydrates: {carbs} g</p>
         <p>Protein: {protein} g</p>
       </div>
-      <button onClick={() => {}} style={styles.button}>
+      <button style={styles.button}>
         Check Your Nutrition Analysis
       </button>
     </div>
@@ -62,9 +63,9 @@ const Nutrition = () => {
 const styles = {
   page: {
     textAlign: 'center',
-    paddingTop: '0px',             
+    paddingTop: '0px',
     paddingBottom: '40px',
-    marginTop: '-150px'   
+    marginTop: '-150px',
   },
   card: {
     margin: '20px auto',
@@ -72,7 +73,7 @@ const styles = {
     width: '300px',
     borderRadius: '12px',
     boxShadow: '0px 4px 8px rgba(0,0,0,0.1)',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   button: {
     marginTop: '20px',
@@ -82,8 +83,8 @@ const styles = {
     border: 'none',
     borderRadius: '8px',
     fontSize: '16px',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };
 
 export default Nutrition;
