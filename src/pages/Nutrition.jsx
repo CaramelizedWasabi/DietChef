@@ -1,4 +1,4 @@
-// src/pages/Nutrition.jsx 최종 대안
+// src/pages/Nutrition.jsx
 import React, { useState, useEffect } from 'react';
 import { getAuth } from 'firebase/auth';
 import { getDatabase, ref, get } from 'firebase/database';
@@ -79,7 +79,7 @@ const styles = {
     backgroundColor: 'white',
   },
   button: {
-    display: 'inline-block', // Link는 기본적으로 inline이므로 변경
+    display: 'inline-block', 
     marginTop: '20px',
     padding: '10px 20px',
     backgroundColor: '#fdbb30',

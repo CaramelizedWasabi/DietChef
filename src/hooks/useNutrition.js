@@ -1,8 +1,8 @@
 // src/hooks/useNutrition.js
 import { useState, useEffect, useCallback } from 'react';
-import { 
-  searchFoods, 
-  saveConsumedFood, 
+import {
+  searchFoods,
+  saveConsumedFood,
   deleteConsumedFood,
   getTodayConsumedFoods
 } from '../services/foodService';
@@ -25,6 +25,10 @@ function useNutritionHook() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  
+  // 모달 관련 상태 추가
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [lastSearchQuery, setLastSearchQuery] = useState('');
 
   // 초기 데이터 로드
   useEffect(() => {
@@ -58,9 +62,16 @@ function useNutritionHook() {
 
     try {
       setIsLoading(true);
+      setLastSearchQuery(searchText); // 검색 쿼리 저장
       const results = await searchFoods(searchText);
       setSearchResults(results);
       setShowSearchResults(true);
+      
+      // 검색 결과가 없으면 수동 추가 모달 표시
+      if (results.length === 0) {
+        setShowAddModal(true);
+      }
+      
       setIsLoading(false);
     } catch (err) {
       setError('Search failed. Please try again later.');
@@ -83,6 +94,20 @@ function useNutritionHook() {
       setIsLoading(false);
       console.error('Error adding food:', err);
     }
+  }, []);
+
+  // 수동으로 음식 추가
+  const addCustomFood = useCallback((food) => {
+    // 사용자가 입력한 음식 정보를 저장
+    const customFood = {
+      ...food,
+      entryId: Date.now() // 고유 ID 생성
+    };
+    
+    setConsumedFoods(prev => [...prev, customFood]);
+    setShowAddModal(false);
+    setSearchText('');
+    setShowSearchResults(false);
   }, []);
 
   // 음식 삭제 기능
@@ -151,6 +176,8 @@ function useNutritionHook() {
     dailyNutrition,
     isLoading,
     error,
+    showAddModal,
+    lastSearchQuery,
     
     // 상태 변경 함수
     setSearchText,
@@ -158,7 +185,9 @@ function useNutritionHook() {
     addFood,
     removeFood,
     calculateSegments,
-    clearError
+    clearError,
+    setShowAddModal,
+    addCustomFood
   };
 }
 

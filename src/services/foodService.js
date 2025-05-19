@@ -104,8 +104,6 @@ export const getFoodDetails = async (foodId) => {
  */
 export const saveConsumedFood = async (foodEntry) => {
   try {
-    // 실제 API를 사용한다면 여기서 API 호출이나 로컬 저장소 관리
-    // 현재는 단순히 ID를 추가해서 반환
     return { ...foodEntry, entryId: Date.now() };
   } catch (error) {
     console.error('Error saving consumed food:', error);
@@ -120,8 +118,6 @@ export const saveConsumedFood = async (foodEntry) => {
  */
 export const deleteConsumedFood = async (entryId) => {
   try {
-    // 실제 API를 사용한다면 여기서 API 호출이나 로컬 저장소 관리
-    // 현재는 항상 성공 반환
     return true;
   } catch (error) {
     console.error('Error deleting consumed food:', error);
@@ -135,8 +131,6 @@ export const deleteConsumedFood = async (entryId) => {
  */
 export const getTodayConsumedFoods = async () => {
   try {
-    // 실제 API를 사용한다면 여기서 API 호출이나 로컬 저장소 관리
-    // 현재는 빈 배열 반환
     return [];
   } catch (error) {
     console.error('Error fetching today consumed foods:', error);
