@@ -26,7 +26,7 @@ const AddFoodModal = ({ isOpen, onClose, onAdd }) => {
     
     // 입력값 유효성 검사
     if (!formData.name.trim()) {
-      alert('Please enter the name of the food.');
+      alert('음식 이름을 입력해주세요.');
       return;
     }
     
@@ -78,9 +78,10 @@ const AddFoodModal = ({ isOpen, onClose, onAdd }) => {
       borderRadius: '8px',
       padding: '20px',
       width: '90%',
-      maxWidth: '500px',
+      maxWidth: '450px', // 모달 너비 줄임
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-      position: 'relative'
+      position: 'relative',
+      overflow: 'hidden' // 내용이 넘치지 않도록 설정
     },
     closeButton: {
       position: 'absolute',
@@ -111,7 +112,8 @@ const AddFoodModal = ({ isOpen, onClose, onAdd }) => {
       padding: '8px 10px',
       borderRadius: '4px',
       border: '1px solid #ddd',
-      fontSize: '16px'
+      fontSize: '16px',
+      boxSizing: 'border-box' // 패딩과 테두리를 포함한 크기 설정
     },
     submitButton: {
       width: '100%',
@@ -123,14 +125,25 @@ const AddFoodModal = ({ isOpen, onClose, onAdd }) => {
       fontSize: '16px',
       fontWeight: 'bold',
       cursor: 'pointer',
-      marginTop: '10px'
+      marginTop: '15px'
     },
-    row: {
+    rowContainer: {
       display: 'flex',
-      gap: '10px'
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      gap: '15px', // 입력칸 사이의 간격 조정
+      marginBottom: '15px'
     },
     column: {
-      flex: 1
+      flex: 1,
+      minWidth: 0 // flex 아이템이 컨테이너보다 작아질 수 있게 함
+    },
+    singleInput: {
+      marginBottom: '15px'
+    },
+    form: {
+      display: 'flex',
+      flexDirection: 'column'
     }
   };
 
@@ -140,8 +153,9 @@ const AddFoodModal = ({ isOpen, onClose, onAdd }) => {
         <button style={styles.closeButton} onClick={onClose}>×</button>
         <h2 style={styles.title}>Do you want a manual addition?</h2>
         
-        <form onSubmit={handleSubmit}>
-          <div style={styles.inputGroup}>
+        <form onSubmit={handleSubmit} style={styles.form}>
+          {/* 이름 입력란 */}
+          <div style={styles.singleInput}>
             <label style={styles.label}>Name</label>
             <input
               type="text"
@@ -149,68 +163,69 @@ const AddFoodModal = ({ isOpen, onClose, onAdd }) => {
               value={formData.name}
               onChange={handleChange}
               style={styles.input}
-              placeholder="Name"
+              placeholder="Enter food name"
             />
           </div>
           
-          <div style={styles.row}>
+          {/* 칼로리와 탄수화물 입력란을 한 줄에 배치 */}
+          <div style={styles.rowContainer}>
             <div style={styles.column}>
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>Calories (kcal)</label>
-                <input
-                  type="number"
-                  name="calories"
-                  value={formData.calories}
-                  onChange={handleChange}
-                  style={styles.input}
-                  placeholder="0"
-                  min="0"
-                />
-              </div>
+              <label style={styles.label}>Calories (kcal)</label>
+              <input
+                type="number"
+                name="calories"
+                value={formData.calories}
+                onChange={handleChange}
+                style={styles.input}
+                placeholder="0"
+                min="0"
+              />
             </div>
             
             <div style={styles.column}>
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>Carbs (g)</label>
-                <input
-                  type="number"
-                  name="carbs"
-                  value={formData.carbs}
-                  onChange={handleChange}
-                  style={styles.input}
-                  placeholder="0"
-                  min="0"
-                />
-              </div>
+              <label style={styles.label}>Carbs (g)</label>
+              <input
+                type="number"
+                name="carbs"
+                value={formData.carbs}
+                onChange={handleChange}
+                style={styles.input}
+                placeholder="0"
+                min="0"
+              />
             </div>
           </div>
           
-          <div style={styles.inputGroup}>
-            <label style={styles.label}>Protein (g)</label>
-            <input
-              type="number"
-              name="protein"
-              value={formData.protein}
-              onChange={handleChange}
-              style={styles.input}
-              placeholder="0"
-              min="0"
-            />
+          {/* 단백질과 지방 입력란을 한 줄에 배치 */}
+          <div style={styles.rowContainer}>
+            <div style={styles.column}>
+              <label style={styles.label}>Protein (g)</label>
+              <input
+                type="number"
+                name="protein"
+                value={formData.protein}
+                onChange={handleChange}
+                style={styles.input}
+                placeholder="0"
+                min="0"
+              />
+            </div>
+            
+            <div style={styles.column}>
+              <label style={styles.label}>Fat (g)</label>
+              <input
+                type="number"
+                name="fat"
+                value={formData.fat}
+                onChange={handleChange}
+                style={styles.input}
+                placeholder="0"
+                min="0"
+              />
+            </div>
           </div>
           
-          <div style={styles.inputGroup}>
-            <label style={styles.label}>Fat (g)</label>
-            <input
-              type="number"
-              name="fat"
-              value={formData.fat}
-              onChange={handleChange}
-              style={styles.input}
-              placeholder="0"
-              min="0"
-            />
-          </div>
-          
+          {/* 추가 버튼 */}
           <button type="submit" style={styles.submitButton}>Add</button>
         </form>
       </div>
