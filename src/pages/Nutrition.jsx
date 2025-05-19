@@ -1,14 +1,13 @@
-// src/pages/Nutrition.jsx 수정
+// src/pages/Nutrition.jsx 최종 대안
 import React, { useState, useEffect } from 'react';
 import { getAuth } from 'firebase/auth';
-import { getDatabase, ref, get, child } from 'firebase/database'; // Realtime Database
-import { useNavigate } from 'react-router-dom';
+import { getDatabase, ref, get } from 'firebase/database';
+import { Link } from 'react-router-dom'; // Link 컴포넌트 사용
 
 const Nutrition = () => {
   const [calories, setCalories] = useState(0);
   const [carbs, setCarbs] = useState(0);
   const [protein, setProtein] = useState(0);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserNutrition = async () => {
@@ -16,14 +15,14 @@ const Nutrition = () => {
       const user = auth.currentUser;
       if (!user) return;
 
-      const db = getDatabase(); // Realtime DB 사용
-      const userRef = ref(db, `users/${user.uid}/survey`); // 경로: users/{uid}/survey
+      const db = getDatabase();
+      const userRef = ref(db, `users/${user.uid}/survey`);
       try {
         const snapshot = await get(userRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
           const { height, weight, gender } = data;
-          const age = 22; // 나중에 생일에서 계산 가능
+          const age = 22;
           const cal =
             gender === 'male'
               ? Math.round(66 + 13.7 * weight + 5 * height - 6.8 * age)
@@ -41,13 +40,7 @@ const Nutrition = () => {
     fetchUserNutrition();
   }, []);
 
-  const handleAnalysisClick = () => {
-    console.log('✅ 버튼 클릭됨');
-    // 직접 페이지 이동시켜 보기
-    window.location.href = '/nutrition-analysis';
-    // navigate('/nutrition-analysis'); // 이것도 문제가 생기면 위의 코드 사용
-  };
-
+  // 버튼 대신 Link 컴포넌트 사용
   return (
     <div style={styles.page}>
       <h2>Check Your Daily Nutrient Needs!</h2>
@@ -57,12 +50,15 @@ const Nutrition = () => {
         <p>Carbohydrates: {carbs} g</p>
         <p>Protein: {protein} g</p>
       </div>
-      <button
-        onClick={handleAnalysisClick}
+      
+      {/* 버튼 대신 Link 컴포넌트 사용 */}
+      <Link 
+        to="/nutrition-analysis" 
         style={styles.button}
+        onClick={() => console.log('✅ 링크 클릭됨')}
       >
         Check Your Nutrition Analysis
-      </button>
+      </Link>
     </div>
   );
 };
@@ -83,6 +79,7 @@ const styles = {
     backgroundColor: 'white',
   },
   button: {
+    display: 'inline-block', // Link는 기본적으로 inline이므로 변경
     marginTop: '20px',
     padding: '10px 20px',
     backgroundColor: '#fdbb30',
@@ -91,6 +88,8 @@ const styles = {
     borderRadius: '8px',
     fontSize: '16px',
     cursor: 'pointer',
+    textDecoration: 'none', // 링크 밑줄 제거
+    textAlign: 'center',
   },
 };
 
