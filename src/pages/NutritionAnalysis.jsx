@@ -8,7 +8,7 @@ import SearchResults from '../components/SearchResults';
 import NutritionSummary from '../components/NutritionSummary';
 import FoodList from '../components/FoodList';
 import AddFoodModal from '../components/AddFoodModal';
-import ErrorMessage from '../components/ErrorMessage.jsx';
+import ErrorMessage from '../components/ErrorMessage.jsx';
 
 /**
  * 영양 분석 페이지 컴포넌트
