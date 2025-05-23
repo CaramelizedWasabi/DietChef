@@ -1,0 +1,3046 @@
+{
+  "meal_plans": {
+    "underweight_gain_high_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Power Oatmeal Bowl",
+          "kcal": 650,
+          "ingredients": [
+            "1 cup rolled oats",
+            "1 banana",
+            "2 tbsp peanut butter",
+            "1 tbsp honey",
+            "1/2 cup whole milk",
+            "1/4 cup mixed nuts"
+          ],
+          "how_to_make": [
+            "1. Cook oats with milk in microwave for 2 minutes",
+            "2. Slice banana and mix into oats",
+            "3. Add peanut butter and honey",
+            "4. Top with mixed nuts"
+          ],
+          "reason_why_we_recommend": "High calorie breakfast with complex carbs and healthy fats to fuel your active lifestyle and support weight gain"
+        },
+        "recipe2": {
+          "food": "Protein Pancakes",
+          "kcal": 580,
+          "ingredients": [
+            "2 eggs",
+            "1 banana",
+            "1 scoop protein powder",
+            "1/4 cup oats",
+            "2 tbsp maple syrup",
+            "1 tbsp butter"
+          ],
+          "how_to_make": [
+            "1. Blend eggs, banana, protein powder, and oats",
+            "2. Heat butter in pan",
+            "3. Cook pancakes 3 minutes each side",
+            "4. Serve with maple syrup"
+          ],
+          "reason_why_we_recommend": "Protein-rich breakfast perfect for muscle building and recovery after intense workouts"
+        },
+        "recipe3": {
+          "food": "Avocado Toast Plus",
+          "kcal": 620,
+          "ingredients": [
+            "2 slices whole grain bread",
+            "1 large avocado",
+            "2 eggs",
+            "1/4 cup feta cheese",
+            "1 tbsp olive oil",
+            "Cherry tomatoes"
+          ],
+          "how_to_make": [
+            "1. Toast bread slices",
+            "2. Mash avocado with olive oil",
+            "3. Fry eggs sunny side up",
+            "4. Layer avocado, eggs, feta, and tomatoes on toast"
+          ],
+          "reason_why_we_recommend": "Balanced meal with healthy fats and protein to support weight gain and provide sustained energy"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Chicken Quinoa Power Bowl",
+          "kcal": 750,
+          "ingredients": [
+            "6 oz grilled chicken breast",
+            "1 cup cooked quinoa",
+            "1/2 avocado",
+            "1/4 cup chickpeas",
+            "Mixed vegetables",
+            "2 tbsp tahini dressing"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast with seasonings",
+            "2. Cook quinoa according to package",
+            "3. Roast mixed vegetables",
+            "4. Combine all ingredients in bowl with dressing"
+          ],
+          "reason_why_we_recommend": "Complete protein with complex carbs ideal for muscle building and post-workout recovery"
+        },
+        "recipe2": {
+          "food": "Salmon Rice Bowl",
+          "kcal": 680,
+          "ingredients": [
+            "5 oz salmon fillet",
+            "1 cup brown rice",
+            "1/2 cup edamame",
+            "Cucumber slices",
+            "2 tbsp teriyaki sauce",
+            "1 tbsp sesame seeds"
+          ],
+          "how_to_make": [
+            "1. Pan-sear salmon with teriyaki",
+            "2. Cook brown rice",
+            "3. Steam edamame",
+            "4. Arrange in bowl with cucumber and sesame seeds"
+          ],
+          "reason_why_we_recommend": "Omega-3 rich meal that supports muscle growth and reduces exercise-induced inflammation"
+        },
+        "recipe3": {
+          "food": "Turkey Wrap Supreme",
+          "kcal": 720,
+          "ingredients": [
+            "Large whole wheat tortilla",
+            "6 oz sliced turkey",
+            "2 tbsp hummus",
+            "1/4 cup cheese",
+            "Lettuce and tomato",
+            "1 tbsp olive oil"
+          ],
+          "how_to_make": [
+            "1. Spread hummus on tortilla",
+            "2. Layer turkey and cheese",
+            "3. Add vegetables",
+            "4. Drizzle with olive oil and wrap tightly"
+          ],
+          "reason_why_we_recommend": "Portable high-protein meal perfect for active individuals needing convenient nutrition"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Steak and Sweet Potato",
+          "kcal": 800,
+          "ingredients": [
+            "6 oz lean steak",
+            "1 large baked sweet potato",
+            "2 cups steamed broccoli",
+            "2 tbsp butter",
+            "1 tbsp olive oil"
+          ],
+          "how_to_make": [
+            "1. Season and grill steak to preference",
+            "2. Bake sweet potato for 45 minutes",
+            "3. Steam broccoli until tender",
+            "4. Add butter to potato and olive oil to broccoli"
+          ],
+          "reason_why_we_recommend": "High-quality protein and complex carbs to support muscle growth and recovery"
+        },
+        "recipe2": {
+          "food": "Pasta with Meat Sauce",
+          "kcal": 750,
+          "ingredients": [
+            "2 cups whole wheat pasta",
+            "6 oz lean ground beef",
+            "1 cup marinara sauce",
+            "2 tbsp parmesan cheese",
+            "1 tbsp olive oil",
+            "Mixed herbs"
+          ],
+          "how_to_make": [
+            "1. Cook pasta according to package",
+            "2. Brown ground beef with herbs",
+            "3. Add marinara sauce and simmer",
+            "4. Serve over pasta with cheese"
+          ],
+          "reason_why_we_recommend": "Carb-rich meal ideal for replenishing energy stores after intense training sessions"
+        },
+        "recipe3": {
+          "food": "Chicken Stir Fry",
+          "kcal": 720,
+          "ingredients": [
+            "6 oz chicken thighs",
+            "2 cups mixed vegetables",
+            "1 cup jasmine rice",
+            "2 tbsp soy sauce",
+            "1 tbsp sesame oil",
+            "1 tbsp ginger"
+          ],
+          "how_to_make": [
+            "1. Cook rice in rice cooker",
+            "2. Stir-fry chicken with ginger",
+            "3. Add vegetables and soy sauce",
+            "4. Drizzle with sesame oil before serving"
+          ],
+          "reason_why_we_recommend": "Balanced meal with lean protein and vegetables to support muscle building goals"
+        }
+      }
+    },
+    "underweight_gain_low_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Smoothie Bowl",
+          "kcal": 520,
+          "ingredients": [
+            "1 cup whole milk",
+            "1/2 banana",
+            "1/2 cup berries",
+            "2 tbsp granola",
+            "1 tbsp almond butter",
+            "1 tsp honey"
+          ],
+          "how_to_make": [
+            "1. Blend milk, banana, and berries",
+            "2. Pour into bowl",
+            "3. Top with granola and almond butter",
+            "4. Drizzle with honey"
+          ],
+          "reason_why_we_recommend": "Nutrient-dense breakfast that provides steady energy for gradual weight gain"
+        },
+        "recipe2": {
+          "food": "French Toast",
+          "kcal": 480,
+          "ingredients": [
+            "2 slices brioche bread",
+            "2 eggs",
+            "1/4 cup milk",
+            "1 tbsp butter",
+            "2 tbsp maple syrup",
+            "Cinnamon"
+          ],
+          "how_to_make": [
+            "1. Whisk eggs, milk, and cinnamon",
+            "2. Dip bread in mixture",
+            "3. Cook in buttered pan 3 minutes per side",
+            "4. Serve with maple syrup"
+          ],
+          "reason_why_we_recommend": "Comforting breakfast that adds healthy calories without being too heavy"
+        },
+        "recipe3": {
+          "food": "Yogurt Parfait",
+          "kcal": 450,
+          "ingredients": [
+            "1 cup Greek yogurt",
+            "1/4 cup granola",
+            "1/2 cup mixed berries",
+            "2 tbsp honey",
+            "1 tbsp chopped nuts",
+            "Mint leaves"
+          ],
+          "how_to_make": [
+            "1. Layer yogurt in glass",
+            "2. Add berries and granola",
+            "3. Repeat layers",
+            "4. Top with honey and nuts"
+          ],
+          "reason_why_we_recommend": "Protein-rich meal that supports healthy weight gain with probiotics for digestion"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Club Sandwich",
+          "kcal": 620,
+          "ingredients": [
+            "3 slices whole grain bread",
+            "4 oz turkey",
+            "2 strips bacon",
+            "Lettuce and tomato",
+            "2 tbsp mayo",
+            "1 slice cheese"
+          ],
+          "how_to_make": [
+            "1. Toast bread slices",
+            "2. Cook bacon until crispy",
+            "3. Layer turkey, bacon, cheese, and vegetables",
+            "4. Spread mayo between layers"
+          ],
+          "reason_why_we_recommend": "Satisfying sandwich that provides protein and healthy fats for weight gain"
+        },
+        "recipe2": {
+          "food": "Chicken Caesar Salad",
+          "kcal": 580,
+          "ingredients": [
+            "4 oz grilled chicken",
+            "4 cups romaine lettuce",
+            "1/4 cup croutons",
+            "2 tbsp parmesan cheese",
+            "3 tbsp caesar dressing",
+            "Lemon wedge"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast",
+            "2. Chop romaine lettuce",
+            "3. Toss with dressing",
+            "4. Top with chicken, croutons, and cheese"
+          ],
+          "reason_why_we_recommend": "Light but protein-rich meal that won't make you feel too full"
+        },
+        "recipe3": {
+          "food": "Tuna Melt",
+          "kcal": 540,
+          "ingredients": [
+            "2 slices sourdough bread",
+            "1 can tuna",
+            "2 tbsp mayo",
+            "1 slice cheddar cheese",
+            "Tomato slices",
+            "1 tbsp butter"
+          ],
+          "how_to_make": [
+            "1. Mix tuna with mayo",
+            "2. Spread on bread with tomato",
+            "3. Top with cheese",
+            "4. Grill in buttered pan until cheese melts"
+          ],
+          "reason_why_we_recommend": "Omega-3 rich meal that provides healthy fats and protein for weight gain"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Baked Cod with Rice",
+          "kcal": 650,
+          "ingredients": [
+            "5 oz cod fillet",
+            "1 cup white rice",
+            "2 tbsp butter",
+            "1 cup green beans",
+            "Lemon slices",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Bake cod with lemon and herbs at 400°F",
+            "2. Cook rice with butter",
+            "3. Steam green beans",
+            "4. Serve together with lemon wedges"
+          ],
+          "reason_why_we_recommend": "Mild, easily digestible meal that provides quality protein for healthy weight gain"
+        },
+        "recipe2": {
+          "food": "Beef Stew",
+          "kcal": 620,
+          "ingredients": [
+            "5 oz beef chunks",
+            "2 potatoes",
+            "1 cup carrots",
+            "1 cup beef broth",
+            "1 tbsp flour",
+            "Fresh thyme"
+          ],
+          "how_to_make": [
+            "1. Brown beef in pot",
+            "2. Add vegetables and broth",
+            "3. Simmer for 1 hour",
+            "4. Thicken with flour if needed"
+          ],
+          "reason_why_we_recommend": "Hearty, warming meal that provides protein and calories in an easy-to-digest format"
+        },
+        "recipe3": {
+          "food": "Chicken Alfredo",
+          "kcal": 680,
+          "ingredients": [
+            "5 oz chicken breast",
+            "1.5 cups fettuccine",
+            "1/2 cup alfredo sauce",
+            "2 tbsp parmesan cheese",
+            "1 tbsp olive oil",
+            "Black pepper"
+          ],
+          "how_to_make": [
+            "1. Cook pasta according to package",
+            "2. Sauté chicken in olive oil",
+            "3. Heat alfredo sauce",
+            "4. Combine all ingredients with cheese"
+          ],
+          "reason_why_we_recommend": "Creamy, calorie-dense meal that helps with weight gain while being satisfying"
+        }
+      }
+    },
+    "underweight_maintain_high_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Energy Smoothie",
+          "kcal": 420,
+          "ingredients": [
+            "1 cup almond milk",
+            "1/2 banana",
+            "1 tbsp almond butter",
+            "1 scoop protein powder",
+            "1 tbsp chia seeds",
+            "Ice cubes"
+          ],
+          "how_to_make": [
+            "1. Add all ingredients to blender",
+            "2. Blend until smooth",
+            "3. Add ice if desired consistency",
+            "4. Serve immediately"
+          ],
+          "reason_why_we_recommend": "Quick protein-rich breakfast perfect for pre-workout fuel and muscle maintenance"
+        },
+        "recipe2": {
+          "food": "Egg White Omelet",
+          "kcal": 380,
+          "ingredients": [
+            "4 egg whites",
+            "1/4 cup spinach",
+            "2 tbsp feta cheese",
+            "1 slice whole grain toast",
+            "1 tsp olive oil",
+            "Cherry tomatoes"
+          ],
+          "how_to_make": [
+            "1. Heat olive oil in pan",
+            "2. Add spinach until wilted",
+            "3. Pour egg whites and cook",
+            "4. Add feta and fold, serve with toast"
+          ],
+          "reason_why_we_recommend": "High-protein, low-calorie meal that maintains muscle without excess weight gain"
+        },
+        "recipe3": {
+          "food": "Overnight Oats",
+          "kcal": 350,
+          "ingredients": [
+            "1/2 cup rolled oats",
+            "1/2 cup low-fat milk",
+            "1 tbsp chia seeds",
+            "1/2 apple diced",
+            "1 tsp honey",
+            "Cinnamon"
+          ],
+          "how_to_make": [
+            "1. Mix oats, milk, and chia seeds",
+            "2. Add apple and honey",
+            "3. Refrigerate overnight",
+            "4. Serve cold with cinnamon"
+          ],
+          "reason_why_we_recommend": "Fiber-rich breakfast that provides sustained energy for active individuals"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Grilled Chicken Salad",
+          "kcal": 450,
+          "ingredients": [
+            "4 oz grilled chicken",
+            "4 cups mixed greens",
+            "1/4 cup quinoa",
+            "1/4 avocado",
+            "2 tbsp balsamic vinaigrette",
+            "Cherry tomatoes"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast",
+            "2. Cook quinoa according to package",
+            "3. Toss greens with vinaigrette",
+            "4. Top with chicken, quinoa, and avocado"
+          ],
+          "reason_why_we_recommend": "Balanced meal with lean protein and complex carbs for energy maintenance"
+        },
+        "recipe2": {
+          "food": "Turkey Lettuce Wraps",
+          "kcal": 320,
+          "ingredients": [
+            "4 oz ground turkey",
+            "Large lettuce leaves",
+            "1/4 cup diced bell peppers",
+            "2 tbsp low-sodium soy sauce",
+            "1 tsp sesame oil",
+            "Green onions"
+          ],
+          "how_to_make": [
+            "1. Cook ground turkey in pan",
+            "2. Add peppers and soy sauce",
+            "3. Drizzle with sesame oil",
+            "4. Serve in lettuce cups with green onions"
+          ],
+          "reason_why_we_recommend": "Low-carb, high-protein meal perfect for maintaining weight while staying active"
+        },
+        "recipe3": {
+          "food": "Vegetable Soup with Protein",
+          "kcal": 380,
+          "ingredients": [
+            "2 cups vegetable broth",
+            "1/2 cup white beans",
+            "1 cup mixed vegetables",
+            "2 oz chicken breast",
+            "1 tbsp olive oil",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Heat broth in pot",
+            "2. Add vegetables and beans",
+            "3. Cook chicken separately and add",
+            "4. Season with herbs and olive oil"
+          ],
+          "reason_why_we_recommend": "Light, nutritious meal that provides protein and fiber for sustained energy"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Baked Salmon with Vegetables",
+          "kcal": 480,
+          "ingredients": [
+            "4 oz salmon fillet",
+            "1 cup broccoli",
+            "1/2 cup quinoa",
+            "1 tbsp olive oil",
+            "Lemon juice",
+            "Fresh dill"
+          ],
+          "how_to_make": [
+            "1. Bake salmon with lemon and dill",
+            "2. Steam broccoli until tender",
+            "3. Cook quinoa according to package",
+            "4. Drizzle vegetables with olive oil"
+          ],
+          "reason_why_we_recommend": "Omega-3 rich meal that supports recovery and maintains healthy weight"
+        },
+        "recipe2": {
+          "food": "Lean Beef Stir Fry",
+          "kcal": 420,
+          "ingredients": [
+            "4 oz lean beef strips",
+            "2 cups mixed vegetables",
+            "1/2 cup brown rice",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp ginger",
+            "1 tbsp olive oil"
+          ],
+          "how_to_make": [
+            "1. Cook brown rice",
+            "2. Stir-fry beef with ginger",
+            "3. Add vegetables and soy sauce",
+            "4. Serve over rice"
+          ],
+          "reason_why_we_recommend": "High-protein meal with complex carbs for post-workout recovery"
+        },
+        "recipe3": {
+          "food": "Chicken and Vegetable Curry",
+          "kcal": 440,
+          "ingredients": [
+            "4 oz chicken breast",
+            "1 cup mixed vegetables",
+            "1/2 cup light coconut milk",
+            "1 tbsp curry powder",
+            "1/2 cup basmati rice",
+            "Fresh cilantro"
+          ],
+          "how_to_make": [
+            "1. Cook rice according to package",
+            "2. Sauté chicken with curry powder",
+            "3. Add vegetables and coconut milk",
+            "4. Simmer and serve with cilantro"
+          ],
+          "reason_why_we_recommend": "Flavorful meal with anti-inflammatory spices perfect for active recovery"
+        }
+      }
+    },
+    "underweight_maintain_low_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Whole Grain Toast with Avocado",
+          "kcal": 320,
+          "ingredients": [
+            "2 slices whole grain bread",
+            "1/2 avocado",
+            "1 tbsp feta cheese",
+            "Cherry tomatoes",
+            "1 tsp olive oil",
+            "Black pepper"
+          ],
+          "how_to_make": [
+            "1. Toast bread slices",
+            "2. Mash avocado with olive oil",
+            "3. Spread on toast",
+            "4. Top with feta, tomatoes, and pepper"
+          ],
+          "reason_why_we_recommend": "Heart-healthy breakfast with good fats that provides steady energy"
+        },
+        "recipe2": {
+          "food": "Greek Yogurt Bowl",
+          "kcal": 280,
+          "ingredients": [
+            "1 cup Greek yogurt",
+            "1/4 cup berries",
+            "1 tbsp granola",
+            "1 tsp honey",
+            "1 tbsp chopped almonds",
+            "Mint leaves"
+          ],
+          "how_to_make": [
+            "1. Place yogurt in bowl",
+            "2. Top with berries and granola",
+            "3. Drizzle with honey",
+            "4. Garnish with almonds and mint"
+          ],
+          "reason_why_we_recommend": "Protein-rich breakfast that supports muscle maintenance without excess calories"
+        },
+        "recipe3": {
+          "food": "Scrambled Eggs with Vegetables",
+          "kcal": 300,
+          "ingredients": [
+            "2 eggs",
+            "1/4 cup spinach",
+            "1/4 cup mushrooms",
+            "1 slice whole grain toast",
+            "1 tsp butter",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Sauté vegetables in butter",
+            "2. Add beaten eggs",
+            "3. Scramble gently",
+            "4. Serve with toast and herbs"
+          ],
+          "reason_why_we_recommend": "Balanced breakfast with protein and vegetables for steady energy"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Mediterranean Wrap",
+          "kcal": 380,
+          "ingredients": [
+            "Whole wheat tortilla",
+            "3 oz grilled chicken",
+            "2 tbsp hummus",
+            "Cucumber and tomato",
+            "1 tbsp feta cheese",
+            "Lettuce"
+          ],
+          "how_to_make": [
+            "1. Spread hummus on tortilla",
+            "2. Add chicken and vegetables",
+            "3. Sprinkle with feta",
+            "4. Roll tightly and slice"
+          ],
+          "reason_why_we_recommend": "Mediterranean flavors with lean protein for healthy weight maintenance"
+        },
+        "recipe2": {
+          "food": "Quinoa Salad Bowl",
+          "kcal": 350,
+          "ingredients": [
+            "1/2 cup cooked quinoa",
+            "3 oz grilled fish",
+            "Mixed greens",
+            "1/4 cup chickpeas",
+            "2 tbsp tahini dressing",
+            "Cucumber"
+          ],
+          "how_to_make": [
+            "1. Cook quinoa according to package",
+            "2. Grill fish with seasonings",
+            "3. Combine greens and quinoa",
+            "4. Top with fish, chickpeas, and dressing"
+          ],
+          "reason_why_we_recommend": "Complete protein meal with fiber for sustained energy and satiety"
+        },
+        "recipe3": {
+          "food": "Vegetable Pasta Salad",
+          "kcal": 320,
+          "ingredients": [
+            "1 cup whole wheat pasta",
+            "1/2 cup cherry tomatoes",
+            "1/4 cup mozzarella balls",
+            "2 tbsp basil pesto",
+            "1 tbsp pine nuts",
+            "Fresh basil"
+          ],
+          "how_to_make": [
+            "1. Cook pasta and cool",
+            "2. Mix with tomatoes and mozzarella",
+            "3. Toss with pesto",
+            "4. Top with pine nuts and basil"
+          ],
+          "reason_why_we_recommend": "Light pasta dish with vegetables and moderate calories for weight maintenance"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Herb-Crusted Chicken",
+          "kcal": 400,
+          "ingredients": [
+            "4 oz chicken breast",
+            "1 cup roasted vegetables",
+            "1/2 cup wild rice",
+            "1 tbsp olive oil",
+            "Fresh herbs",
+            "Lemon"
+          ],
+          "how_to_make": [
+            "1. Season chicken with herbs",
+            "2. Bake at 375°F for 25 minutes",
+            "3. Roast vegetables with olive oil",
+            "4. Serve with cooked wild rice"
+          ],
+          "reason_why_we_recommend": "Lean protein with complex carbs and vegetables for balanced nutrition"
+        },
+        "recipe2": {
+          "food": "Fish Tacos",
+          "kcal": 360,
+          "ingredients": [
+            "4 oz white fish",
+            "2 corn tortillas",
+            "1/4 cup cabbage slaw",
+            "2 tbsp Greek yogurt",
+            "1 tbsp lime juice",
+            "Fresh cilantro"
+          ],
+          "how_to_make": [
+            "1. Season and grill fish",
+            "2. Warm tortillas",
+            "3. Mix yogurt with lime juice",
+            "4. Assemble tacos with slaw and cilantro"
+          ],
+          "reason_why_we_recommend": "Light, flavorful meal with lean protein and fresh vegetables"
+        },
+        "recipe3": {
+          "food": "Vegetable Curry with Tofu",
+          "kcal": 380,
+          "ingredients": [
+            "4 oz firm tofu",
+            "1 cup mixed vegetables",
+            "1/2 cup brown rice",
+            "1/2 cup light coconut milk",
+            "1 tbsp curry paste",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Cook brown rice",
+            "2. Sauté tofu until golden",
+            "3. Add vegetables and curry paste",
+            "4. Simmer with coconut milk"
+          ],
+          "reason_why_we_recommend": "Plant-based protein with vegetables and spices for balanced nutrition"
+        }
+      }
+    },
+    "underweight_lose_high_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Protein Smoothie",
+          "kcal": 280,
+          "ingredients": [
+            "1 scoop protein powder",
+            "1 cup unsweetened almond milk",
+            "1/2 banana",
+            "1 cup spinach",
+            "1 tbsp chia seeds",
+            "Ice cubes"
+          ],
+          "how_to_make": [
+            "1. Add all ingredients to blender",
+            "2. Blend until smooth",
+            "3. Add ice for desired consistency",
+            "4. Serve immediately"
+          ],
+          "reason_why_we_recommend": "High-protein, low-calorie breakfast that supports muscle while creating caloric deficit"
+        },
+        "recipe2": {
+          "food": "Egg White Scramble",
+          "kcal": 250,
+          "ingredients": [
+            "4 egg whites",
+            "1 cup vegetables",
+            "1 slice whole grain toast",
+            "1 tsp olive oil",
+            "Fresh herbs",
+            "Hot sauce"
+          ],
+          "how_to_make": [
+            "1. Heat oil in non-stick pan",
+            "2. Sauté vegetables",
+            "3. Add egg whites and herbs",
+            "4. Serve with toast and hot sauce"
+          ],
+          "reason_why_we_recommend": "High-protein, low-fat breakfast perfect for weight loss while maintaining muscle"
+        },
+        "recipe3": {
+          "food": "Oatmeal with Berries",
+          "kcal": 220,
+          "ingredients": [
+            "1/2 cup steel-cut oats",
+            "1 cup water",
+            "1/2 cup mixed berries",
+            "1 tsp cinnamon",
+            "1 tsp stevia",
+            "1 tbsp chopped almonds"
+          ],
+          "how_to_make": [
+            "1. Cook oats in water",
+            "2. Add cinnamon and stevia",
+            "3. Top with berries",
+            "4. Sprinkle with almonds"
+          ],
+          "reason_why_we_recommend": "Fiber-rich breakfast that provides sustained energy for workouts while staying low-calorie"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Large Green Salad with Protein",
+          "kcal": 320,
+          "ingredients": [
+            "5 cups mixed greens",
+            "4 oz grilled chicken",
+            "1/4 cup quinoa",
+            "2 tbsp balsamic vinegar",
+            "1 tbsp olive oil",
+            "Cherry tomatoes"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast",
+            "2. Cook quinoa according to package",
+            "3. Toss greens with vinegar and oil",
+            "4. Top with chicken, quinoa, and tomatoes"
+          ],
+          "reason_why_we_recommend": "Volume-rich meal with lean protein that keeps you full on fewer calories"
+        },
+        "recipe2": {
+          "food": "Vegetable Soup with Lean Protein",
+          "kcal": 280,
+          "ingredients": [
+            "2 cups vegetable broth",
+            "1 cup mixed vegetables",
+            "3 oz lean fish",
+            "1/2 cup white beans",
+            "1 tbsp herbs",
+            "Lemon juice"
+          ],
+          "how_to_make": [
+            "1. Heat broth in pot",
+            "2. Add vegetables and simmer",
+            "3. Cook fish separately and flake",
+            "4. Add beans, fish, herbs, and lemon"
+          ],
+          "reason_why_we_recommend": "Low-calorie, high-volume meal that provides protein and fiber for satiety"
+        },
+        "recipe3": {
+          "food": "Zucchini Noodles with Turkey",
+          "kcal": 260,
+          "ingredients": [
+            "2 large zucchini, spiralized",
+            "4 oz ground turkey",
+            "1/2 cup marinara sauce",
+            "1 tbsp parmesan cheese",
+            "1 tsp olive oil",
+            "Fresh basil"
+          ],
+          "how_to_make": [
+            "1. Spiralize zucchini into noodles",
+            "2. Cook turkey in pan with oil",
+            "3. Add marinara sauce",
+            "4. Serve over zucchini with cheese and basil"
+          ],
+          "reason_why_we_recommend": "Low-carb alternative that satisfies pasta cravings while supporting weight loss"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Grilled Fish with Vegetables",
+          "kcal": 350,
+          "ingredients": [
+            "5 oz white fish",
+            "2 cups steamed broccoli",
+            "1/2 cup cauliflower rice",
+            "1 tbsp olive oil",
+            "Lemon and herbs",
+            "Garlic"
+          ],
+          "how_to_make": [
+            "1. Grill fish with lemon and herbs",
+            "2. Steam broccoli until tender",
+            "3. Sauté cauliflower rice with garlic",
+            "4. Drizzle vegetables with olive oil"
+          ],
+          "reason_why_we_recommend": "High-protein, low-carb meal perfect for fat loss while maintaining muscle"
+        },
+        "recipe2": {
+          "food": "Chicken and Vegetable Stir Fry",
+          "kcal": 320,
+          "ingredients": [
+            "4 oz chicken breast",
+            "3 cups mixed vegetables",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp sesame oil",
+            "Ginger and garlic",
+            "Green onions"
+          ],
+          "how_to_make": [
+            "1. Cut chicken into strips",
+            "2. Stir-fry with ginger and garlic",
+            "3. Add vegetables and soy sauce",
+            "4. Finish with sesame oil and green onions"
+          ],
+          "reason_why_we_recommend": "Low-calorie, high-volume meal with lean protein for weight loss support"
+        },
+        "recipe3": {
+          "food": "Turkey and Vegetable Lettuce Wraps",
+          "kcal": 290,
+          "ingredients": [
+            "4 oz ground turkey",
+            "Large lettuce leaves",
+            "1 cup diced vegetables",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp olive oil",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Cook turkey with oil",
+            "2. Add vegetables and soy sauce",
+            "3. Season with herbs",
+            "4. Serve in lettuce cups"
+          ],
+          "reason_why_we_recommend": "Ultra-low carb meal that maximizes protein while minimizing calories"
+        }
+      }
+    },
+    "underweight_lose_low_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Green Smoothie",
+          "kcal": 200,
+          "ingredients": [
+            "1 cup spinach",
+            "1/2 apple",
+            "1/2 banana",
+            "1 cup water",
+            "1 tbsp chia seeds",
+            "Ice cubes"
+          ],
+          "how_to_make": [
+            "1. Add all ingredients to blender",
+            "2. Blend until smooth",
+            "3. Add ice for consistency",
+            "4. Serve chilled"
+          ],
+          "reason_why_we_recommend": "Nutrient-dense, low-calorie breakfast that provides essential vitamins"
+        },
+        "recipe2": {
+          "food": "Cottage Cheese Bowl",
+          "kcal": 180,
+          "ingredients": [
+            "1/2 cup low-fat cottage cheese",
+            "1/4 cup berries",
+            "1 tsp honey",
+            "1 tbsp chopped nuts",
+            "Cinnamon",
+            "Mint leaves"
+          ],
+          "how_to_make": [
+            "1. Place cottage cheese in bowl",
+            "2. Top with berries",
+            "3. Drizzle with honey",
+            "4. Sprinkle nuts and cinnamon"
+          ],
+          "reason_why_we_recommend": "High-protein, low-calorie breakfast that supports gradual weight loss"
+        },
+        "recipe3": {
+          "food": "Vegetable Omelet",
+          "kcal": 220,
+          "ingredients": [
+            "2 eggs",
+            "1 cup mixed vegetables",
+            "1 tbsp low-fat cheese",
+            "1 tsp olive oil",
+            "Fresh herbs",
+            "Black pepper"
+          ],
+          "how_to_make": [
+            "1. Heat oil in non-stick pan",
+            "2. Sauté vegetables",
+            "3. Add beaten eggs",
+            "4. Fold with cheese and herbs"
+          ],
+          "reason_why_we_recommend": "Protein-rich breakfast with vegetables for balanced nutrition and satiety"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Large Salad with Beans",
+          "kcal": 280,
+          "ingredients": [
+            "4 cups mixed greens",
+            "1/2 cup chickpeas",
+            "1/4 cup cucumber",
+            "Cherry tomatoes",
+            "2 tbsp balsamic vinegar",
+            "1 tbsp olive oil"
+          ],
+          "how_to_make": [
+            "1. Combine greens and vegetables",
+            "2. Add chickpeas",
+            "3. Whisk vinegar and oil",
+            "4. Toss salad with dressing"
+          ],
+          "reason_why_we_recommend": "High-fiber meal that provides plant protein while keeping calories controlled"
+        },
+        "recipe2": {
+          "food": "Vegetable Soup",
+          "kcal": 250,
+          "ingredients": [
+            "2 cups vegetable broth",
+            "1 cup mixed vegetables",
+            "1/2 cup white beans",
+            "1 tbsp tomato paste",
+            "Fresh herbs",
+            "Lemon juice"
+          ],
+          "how_to_make": [
+            "1. Heat broth in pot",
+            "2. Add vegetables and tomato paste",
+            "3. Simmer until tender",
+            "4. Add beans, herbs, and lemon"
+          ],
+          "reason_why_we_recommend": "Low-calorie, filling soup that provides nutrients and fiber"
+        },
+        "recipe3": {
+          "food": "Turkey Lettuce Wraps",
+          "kcal": 260,
+          "ingredients": [
+            "3 oz lean ground turkey",
+            "Large lettuce leaves",
+            "1/2 cup diced vegetables",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp sesame oil",
+            "Green onions"
+          ],
+          "how_to_make": [
+            "1. Cook turkey in pan",
+            "2. Add vegetables and seasonings",
+            "3. Drizzle with sesame oil",
+            "4. Serve in lettuce cups"
+          ],
+          "reason_why_we_recommend": "Low-carb, high-protein meal that supports gentle weight loss"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Baked Chicken with Vegetables",
+          "kcal": 320,
+          "ingredients": [
+            "4 oz chicken breast",
+            "2 cups roasted vegetables",
+            "1 tbsp olive oil",
+            "Fresh herbs",
+            "Lemon juice",
+            "Garlic"
+          ],
+          "how_to_make": [
+            "1. Season chicken with herbs",
+            "2. Bake at 375°F for 25 minutes",
+            "3. Roast vegetables with oil and garlic",
+            "4. Serve with lemon juice"
+          ],
+          "reason_why_we_recommend": "Simple, clean meal with lean protein and plenty of vegetables"
+        },
+        "recipe2": {
+          "food": "Fish with Steamed Vegetables",
+          "kcal": 290,
+          "ingredients": [
+            "4 oz white fish",
+            "2 cups steamed vegetables",
+            "1/2 cup quinoa",
+            "1 tbsp olive oil",
+            "Lemon and dill",
+            "Black pepper"
+          ],
+          "how_to_make": [
+            "1. Bake fish with lemon and dill",
+            "2. Steam vegetables until tender",
+            "3. Cook quinoa according to package",
+            "4. Drizzle with olive oil"
+          ],
+          "reason_why_we_recommend": "Light dinner with omega-3s and complex carbs for balanced nutrition"
+        },
+        "recipe3": {
+          "food": "Tofu Vegetable Stir Fry",
+          "kcal": 300,
+          "ingredients": [
+            "4 oz firm tofu",
+            "2 cups mixed vegetables",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp sesame oil",
+            "Ginger and garlic",
+            "Brown rice (1/3 cup)"
+          ],
+          "how_to_make": [
+            "1. Press and cube tofu",
+            "2. Stir-fry with ginger and garlic",
+            "3. Add vegetables and soy sauce",
+            "4. Serve over small portion of rice"
+          ],
+          "reason_why_we_recommend": "Plant-based protein with vegetables for healthy weight management"
+        }
+      }
+    },
+    "normal_gain_high_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Power Breakfast Bowl",
+          "kcal": 580,
+          "ingredients": [
+            "1 cup oatmeal",
+            "1 banana",
+            "2 tbsp peanut butter",
+            "1 tbsp honey",
+            "1/2 cup berries",
+            "1/4 cup granola"
+          ],
+          "how_to_make": [
+            "1. Cook oatmeal with water or milk",
+            "2. Slice banana on top",
+            "3. Add peanut butter and honey",
+            "4. Top with berries and granola"
+          ],
+          "reason_why_we_recommend": "Calorie-dense breakfast with complex carbs and healthy fats for muscle building"
+        },
+        "recipe2": {
+          "food": "Breakfast Burrito",
+          "kcal": 620,
+          "ingredients": [
+            "Large flour tortilla",
+            "3 eggs",
+            "1/4 cup cheese",
+            "3 strips bacon",
+            "Hash browns",
+            "Salsa"
+          ],
+          "how_to_make": [
+            "1. Scramble eggs with cheese",
+            "2. Cook bacon and hash browns",
+            "3. Warm tortilla",
+            "4. Fill and wrap with salsa"
+          ],
+          "reason_why_we_recommend": "High-calorie breakfast perfect for fueling intense training sessions"
+        },
+        "recipe3": {
+          "food": "Protein Pancakes Deluxe",
+          "kcal": 650,
+          "ingredients": [
+            "2 eggs",
+            "1 banana",
+            "1 scoop protein powder",
+            "1/2 cup oats",
+            "3 tbsp maple syrup",
+            "2 tbsp butter"
+          ],
+          "how_to_make": [
+            "1. Blend eggs, banana, protein, and oats",
+            "2. Cook pancakes in butter",
+            "3. Stack and serve",
+            "4. Top with maple syrup"
+          ],
+          "reason_why_we_recommend": "Protein-packed breakfast that supports muscle growth and recovery"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Chicken and Rice Bowl",
+          "kcal": 720,
+          "ingredients": [
+            "6 oz chicken thigh",
+            "1.5 cups jasmine rice",
+            "1/2 avocado",
+            "Black beans",
+            "Cheese",
+            "Cilantro lime dressing"
+          ],
+          "how_to_make": [
+            "1. Grill seasoned chicken thigh",
+            "2. Cook rice according to package",
+            "3. Warm black beans",
+            "4. Assemble bowl with toppings"
+          ],
+          "reason_why_we_recommend": "High-protein, high-carb meal perfect for post-workout muscle building"
+        },
+        "recipe2": {
+          "food": "Salmon Poke Bowl",
+          "kcal": 680,
+          "ingredients": [
+            "5 oz salmon",
+            "1 cup sushi rice",
+            "Edamame",
+            "Cucumber",
+            "Spicy mayo",
+            "Seaweed salad"
+          ],
+          "how_to_make": [
+            "1. Prepare sushi rice",
+            "2. Cube fresh salmon",
+            "3. Steam edamame",
+            "4. Assemble bowl with spicy mayo"
+          ],
+          "reason_why_we_recommend": "Omega-3 rich meal with quality carbs for sustained energy and muscle growth"
+        },
+        "recipe3": {
+          "food": "Loaded Turkey Sandwich",
+          "kcal": 750,
+          "ingredients": [
+            "6 oz sliced turkey",
+            "2 slices sourdough bread",
+            "2 tbsp mayo",
+            "Cheese slice",
+            "Avocado",
+            "Side of chips"
+          ],
+          "how_to_make": [
+            "1. Toast bread lightly",
+            "2. Layer turkey and cheese",
+            "3. Add avocado and mayo",
+            "4. Serve with chips"
+          ],
+          "reason_why_we_recommend": "Convenient high-calorie meal with protein and healthy fats for weight gain"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Ribeye Steak Dinner",
+          "kcal": 850,
+          "ingredients": [
+            "6 oz ribeye steak",
+            "Large baked potato",
+            "2 tbsp butter",
+            "Steamed asparagus",
+            "1 tbsp olive oil",
+            "Garlic"
+          ],
+          "how_to_make": [
+            "1. Grill steak to desired doneness",
+            "2. Bake potato and add butter",
+            "3. Steam asparagus with garlic",
+            "4. Drizzle vegetables with olive oil"
+          ],
+          "reason_why_we_recommend": "High-quality protein and carbs perfect for serious muscle building goals"
+        },
+        "recipe2": {
+          "food": "Pasta with Meatballs",
+          "kcal": 780,
+          "ingredients": [
+            "2 cups pasta",
+            "6 oz ground beef meatballs",
+            "1 cup marinara sauce",
+            "3 tbsp parmesan cheese",
+            "2 tbsp olive oil",
+            "Fresh basil"
+          ],
+          "how_to_make": [
+            "1. Cook pasta according to package",
+            "2. Brown meatballs in pan",
+            "3. Add marinara and simmer",
+            "4. Serve over pasta with cheese"
+          ],
+          "reason_why_we_recommend": "Carb-heavy meal ideal for replenishing glycogen after intense workouts"
+        },
+        "recipe3": {
+          "food": "Chicken Thigh Curry",
+          "kcal": 720,
+          "ingredients": [
+            "6 oz chicken thighs",
+            "1 cup basmati rice",
+            "Coconut curry sauce",
+            "Mixed vegetables",
+            "2 tbsp coconut oil",
+            "Fresh cilantro"
+          ],
+          "how_to_make": [
+            "1. Cook rice with coconut oil",
+            "2. Brown chicken thighs",
+            "3. Add curry sauce and vegetables",
+            "4. Simmer and serve with cilantro"
+          ],
+          "reason_why_we_recommend": "Flavorful high-calorie meal with healthy fats for sustained energy"
+        }
+      }
+    },
+    "normal_gain_low_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Classic Breakfast Plate",
+          "kcal": 480,
+          "ingredients": [
+            "2 eggs",
+            "2 slices bacon",
+            "1 slice toast",
+            "1 tbsp butter",
+            "Hash browns",
+            "Orange juice"
+          ],
+          "how_to_make": [
+            "1. Fry eggs sunny side up",
+            "2. Cook bacon until crispy",
+            "3. Toast bread and butter",
+            "4. Serve with hash browns and juice"
+          ],
+          "reason_why_we_recommend": "Traditional breakfast that provides steady calories for gradual weight gain"
+        },
+        "recipe2": {
+          "food": "Granola Yogurt Parfait",
+          "kcal": 420,
+          "ingredients": [
+            "1 cup Greek yogurt",
+            "1/2 cup granola",
+            "1/2 cup mixed berries",
+            "2 tbsp honey",
+            "2 tbsp chopped nuts",
+            "Cinnamon"
+          ],
+          "how_to_make": [
+            "1. Layer yogurt in glass",
+            "2. Add granola and berries",
+            "3. Repeat layers",
+            "4. Top with honey, nuts, and cinnamon"
+          ],
+          "reason_why_we_recommend": "Balanced breakfast with protein and healthy calories for weight gain"
+        },
+        "recipe3": {
+          "food": "Banana Nut Muffin with Milk",
+          "kcal": 450,
+          "ingredients": [
+            "Large banana nut muffin",
+            "1 cup whole milk",
+            "1 tbsp butter",
+            "Fresh fruit",
+            "Honey",
+            "Coffee"
+          ],
+          "how_to_make": [
+            "1. Warm muffin slightly",
+            "2. Add butter if desired",
+            "3. Serve with milk",
+            "4. Add fresh fruit and honey"
+          ],
+          "reason_why_we_recommend": "Convenient breakfast option that adds healthy calories without being too heavy"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Chicken Caesar Wrap",
+          "kcal": 580,
+          "ingredients": [
+            "Large flour tortilla",
+            "5 oz grilled chicken",
+            "3 tbsp caesar dressing",
+            "Romaine lettuce",
+            "Parmesan cheese",
+            "Croutons"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast",
+            "2. Toss lettuce with dressing",
+            "3. Add chicken and cheese",
+            "4. Wrap with croutons inside"
+          ],
+          "reason_why_we_recommend": "Protein-rich wrap that provides calories and satisfaction for weight gain"
+        },
+        "recipe2": {
+          "food": "Beef and Cheese Quesadilla",
+          "kcal": 620,
+          "ingredients": [
+            "2 flour tortillas",
+            "4 oz ground beef",
+            "1/2 cup cheese",
+            "Bell peppers",
+            "Sour cream",
+            "Guacamole"
+          ],
+          "how_to_make": [
+            "1. Cook seasoned ground beef",
+            "2. Fill tortilla with beef and cheese",
+            "3. Cook until cheese melts",
+            "4. Serve with sour cream and guacamole"
+          ],
+          "reason_why_we_recommend": "Calorie-dense meal with protein and healthy fats for weight gain"
+        },
+        "recipe3": {
+          "food": "Tuna Melt Deluxe",
+          "kcal": 550,
+          "ingredients": [
+            "2 slices sourdough bread",
+            "1 can tuna",
+            "3 tbsp mayo",
+            "2 slices cheese",
+            "Tomato slices",
+            "Side of chips"
+          ],
+          "how_to_make": [
+            "1. Mix tuna with mayo",
+            "2. Layer on bread with tomato",
+            "3. Top with cheese",
+            "4. Grill until cheese melts, serve with chips"
+          ],
+          "reason_why_we_recommend": "Classic comfort food that provides protein and calories for healthy weight gain"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Meatloaf with Mashed Potatoes",
+          "kcal": 680,
+          "ingredients": [
+            "5 oz meatloaf slice",
+            "1 cup mashed potatoes",
+            "2 tbsp gravy",
+            "Green beans",
+            "2 tbsp butter",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Bake meatloaf according to recipe",
+            "2. Prepare mashed potatoes with butter",
+            "3. Steam green beans",
+            "4. Serve with gravy and herbs"
+          ],
+          "reason_why_we_recommend": "Comfort food dinner that provides protein and carbs for steady weight gain"
+        },
+        "recipe2": {
+          "food": "Baked Salmon with Rice",
+          "kcal": 620,
+          "ingredients": [
+            "5 oz salmon fillet",
+            "1 cup rice pilaf",
+            "Roasted vegetables",
+            "2 tbsp butter",
+            "Lemon",
+            "Fresh dill"
+          ],
+          "how_to_make": [
+            "1. Bake salmon with lemon and dill",
+            "2. Prepare rice pilaf",
+            "3. Roast vegetables with butter",
+            "4. Serve together with lemon wedges"
+          ],
+          "reason_why_we_recommend": "Heart-healthy dinner with omega-3s and complex carbs for balanced nutrition"
+        },
+        "recipe3": {
+          "food": "Chicken Alfredo",
+          "kcal": 750,
+          "ingredients": [
+            "5 oz chicken breast",
+            "2 cups fettuccine",
+            "1/2 cup alfredo sauce",
+            "3 tbsp parmesan cheese",
+            "2 tbsp olive oil",
+            "Fresh parsley"
+          ],
+          "how_to_make": [
+            "1. Cook pasta according to package",
+            "2. Sauté chicken in olive oil",
+            "3. Heat alfredo sauce",
+            "4. Combine all with cheese and parsley"
+          ],
+          "reason_why_we_recommend": "Rich, satisfying meal that provides ample calories and protein for weight gain"
+        }
+      }
+    },
+    "normal_maintain_high_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Athletic Breakfast Bowl",
+          "kcal": 450,
+          "ingredients": [
+            "1/2 cup oatmeal",
+            "1 scoop protein powder",
+            "1/2 banana",
+            "1 tbsp almond butter",
+            "1/4 cup berries",
+            "1 tbsp chia seeds"
+          ],
+          "how_to_make": [
+            "1. Cook oatmeal with water",
+            "2. Mix in protein powder",
+            "3. Top with banana and berries",
+            "4. Add almond butter and chia seeds"
+          ],
+          "reason_why_we_recommend": "Balanced pre-workout meal with protein and carbs for sustained energy"
+        },
+        "recipe2": {
+          "food": "Egg and Vegetable Scramble",
+          "kcal": 380,
+          "ingredients": [
+            "3 eggs",
+            "1 cup mixed vegetables",
+            "2 slices whole grain toast",
+            "1 tbsp olive oil",
+            "1/4 cup cheese",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Heat oil in pan",
+            "2. Sauté vegetables",
+            "3. Add beaten eggs and cheese",
+            "4. Serve with toast and herbs"
+          ],
+          "reason_why_we_recommend": "Protein-rich breakfast with vegetables for balanced nutrition and energy"
+        },
+        "recipe3": {
+          "food": "Greek Yogurt Power Bowl",
+          "kcal": 420,
+          "ingredients": [
+            "1 cup Greek yogurt",
+            "1/4 cup granola",
+            "1 tbsp honey",
+            "1/4 cup nuts",
+            "1/2 cup berries",
+            "1 tbsp coconut flakes"
+          ],
+          "how_to_make": [
+            "1. Place yogurt in bowl",
+            "2. Layer with granola and berries",
+            "3. Drizzle with honey",
+            "4. Top with nuts and coconut"
+          ],
+          "reason_why_we_recommend": "High-protein breakfast with probiotics and antioxidants for recovery"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Quinoa Power Salad",
+          "kcal": 520,
+          "ingredients": [
+            "1 cup cooked quinoa",
+            "4 oz grilled chicken",
+            "Mixed greens",
+            "1/4 avocado",
+            "Cherry tomatoes",
+            "2 tbsp vinaigrette"
+          ],
+          "how_to_make": [
+            "1. Cook quinoa according to package",
+            "2. Grill seasoned chicken",
+            "3. Combine greens and quinoa",
+            "4. Top with chicken, avocado, and dressing"
+          ],
+          "reason_why_we_recommend": "Complete protein meal with complex carbs perfect for active individuals"
+        },
+        "recipe2": {
+          "food": "Turkey and Hummus Wrap",
+          "kcal": 480,
+          "ingredients": [
+            "Whole wheat tortilla",
+            "4 oz sliced turkey",
+            "3 tbsp hummus",
+            "Vegetables",
+            "2 tbsp feta cheese",
+            "Spinach"
+          ],
+          "how_to_make": [
+            "1. Spread hummus on tortilla",
+            "2. Layer turkey and vegetables",
+            "3. Add feta and spinach",
+            "4. Roll tightly and slice"
+          ],
+          "reason_why_we_recommend": "Balanced meal with lean protein and healthy fats for sustained energy"
+        },
+        "recipe3": {
+          "food": "Salmon Niçoise Salad",
+          "kcal": 540,
+          "ingredients": [
+            "4 oz grilled salmon",
+            "Mixed greens",
+            "Hard-boiled egg",
+            "Green beans",
+            "Cherry tomatoes",
+            "2 tbsp olive oil dressing"
+          ],
+          "how_to_make": [
+            "1. Grill salmon fillet",
+            "2. Steam green beans",
+            "3. Arrange salad components",
+            "4. Drizzle with olive oil dressing"
+          ],
+          "reason_why_we_recommend": "Omega-3 rich meal with protein and vegetables for optimal recovery"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Lean Beef with Sweet Potato",
+          "kcal": 580,
+          "ingredients": [
+            "5 oz lean beef",
+            "1 medium roasted sweet potato",
+            "2 cups steamed broccoli",
+            "1 tbsp olive oil",
+            "Fresh rosemary",
+            "Garlic"
+          ],
+          "how_to_make": [
+            "1. Grill beef with rosemary",
+            "2. Roast sweet potato with garlic",
+            "3. Steam broccoli",
+            "4. Drizzle vegetables with olive oil"
+          ],
+          "reason_why_we_recommend": "High-quality protein with complex carbs for muscle maintenance and recovery"
+        },
+        "recipe2": {
+          "food": "Chicken and Vegetable Stir Fry",
+          "kcal": 520,
+          "ingredients": [
+            "5 oz chicken breast",
+            "2 cups mixed vegetables",
+            "1 cup brown rice",
+            "2 tbsp teriyaki sauce",
+            "1 tbsp sesame oil",
+            "Ginger"
+          ],
+          "how_to_make": [
+            "1. Cook brown rice",
+            "2. Stir-fry chicken with ginger",
+            "3. Add vegetables and teriyaki",
+            "4. Finish with sesame oil"
+          ],
+          "reason_why_we_recommend": "Balanced meal with lean protein and complex carbs for active recovery"
+        },
+        "recipe3": {
+          "food": "Fish Tacos with Quinoa",
+          "kcal": 500,
+          "ingredients": [
+            "4 oz white fish",
+            "2 corn tortillas",
+            "1/2 cup quinoa",
+            "Cabbage slaw",
+            "2 tbsp Greek yogurt sauce",
+            "Lime"
+          ],
+          "how_to_make": [
+            "1. Cook quinoa as side",
+            "2. Grill fish with lime",
+            "3. Warm tortillas",
+            "4. Assemble tacos with slaw and sauce"
+          ],
+          "reason_why_we_recommend": "Light but satisfying meal with lean protein and whole grains"
+        }
+      }
+    },
+    "normal_maintain_low_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Balanced Toast",
+          "kcal": 350,
+          "ingredients": [
+            "2 slices whole grain bread",
+            "1/2 avocado",
+            "1 poached egg",
+            "Cherry tomatoes",
+            "1 tsp olive oil",
+            "Everything bagel seasoning"
+          ],
+          "how_to_make": [
+            "1. Toast bread",
+            "2. Mash avocado with olive oil",
+            "3. Poach egg",
+            "4. Assemble with tomatoes and seasoning"
+          ],
+          "reason_why_we_recommend": "Balanced breakfast with healthy fats and protein for steady energy"
+        },
+        "recipe2": {
+          "food": "Yogurt and Granola",
+          "kcal": 320,
+          "ingredients": [
+            "1 cup Greek yogurt",
+            "1/4 cup granola",
+            "1/2 cup berries",
+            "1 tbsp honey",
+            "1 tbsp chopped almonds",
+            "Cinnamon"
+          ],
+          "how_to_make": [
+            "1. Place yogurt in bowl",
+            "2. Top with granola and berries",
+            "3. Drizzle with honey",
+            "4. Sprinkle almonds and cinnamon"
+          ],
+          "reason_why_we_recommend": "Protein-rich breakfast with probiotics for digestive health and balanced nutrition"
+        },
+        "recipe3": {
+          "food": "Simple Egg Breakfast",
+          "kcal": 380,
+          "ingredients": [
+            "2 eggs",
+            "2 slices whole grain toast",
+            "1 tbsp butter",
+            "1/2 cup fresh fruit",
+            "Coffee",
+            "Salt and pepper"
+          ],
+          "how_to_make": [
+            "1. Scramble eggs with butter",
+            "2. Toast bread",
+            "3. Season eggs with salt and pepper",
+            "4. Serve with fresh fruit"
+          ],
+          "reason_why_we_recommend": "Classic breakfast that provides protein and carbs for sustained morning energy"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Mediterranean Bowl",
+          "kcal": 480,
+          "ingredients": [
+            "4 oz grilled chicken",
+            "1/2 cup quinoa",
+            "1/4 cup hummus",
+            "Mixed vegetables",
+            "2 tbsp feta cheese",
+            "Olive oil drizzle"
+          ],
+          "how_to_make": [
+            "1. Grill seasoned chicken",
+            "2. Cook quinoa",
+            "3. Arrange in bowl with vegetables",
+            "4. Add hummus, feta, and olive oil"
+          ],
+          "reason_why_we_recommend": "Balanced Mediterranean meal with lean protein and healthy fats"
+        },
+        "recipe2": {
+          "food": "Chicken Salad Sandwich",
+          "kcal": 450,
+          "ingredients": [
+            "4 oz chicken salad",
+            "2 slices whole grain bread",
+            "Lettuce leaves",
+            "Tomato slices",
+            "1 tbsp mayo",
+            "Side of fruit"
+          ],
+          "how_to_make": [
+            "1. Prepare chicken salad with mayo",
+            "2. Toast bread lightly",
+            "3. Layer with lettuce and tomato",
+            "4. Serve with fresh fruit"
+          ],
+          "reason_why_we_recommend": "Classic lunch option that provides protein and satisfaction"
+        },
+        "recipe3": {
+          "food": "Vegetable Pasta Salad",
+          "kcal": 420,
+          "ingredients": [
+            "1.5 cups cooked pasta",
+            "1 cup mixed vegetables",
+            "3 oz mozzarella",
+            "2 tbsp pesto",
+            "Cherry tomatoes",
+            "Fresh basil"
+          ],
+          "how_to_make": [
+            "1. Cool cooked pasta",
+            "2. Mix with vegetables and mozzarella",
+            "3. Toss with pesto",
+            "4. Garnish with tomatoes and basil"
+          ],
+          "reason_why_we_recommend": "Light pasta dish with vegetables and moderate calories for weight maintenance"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Baked Chicken with Vegetables",
+          "kcal": 520,
+          "ingredients": [
+            "5 oz chicken breast",
+            "2 cups roasted vegetables",
+            "1/2 cup rice",
+            "2 tbsp olive oil",
+            "Fresh herbs",
+            "Lemon"
+          ],
+          "how_to_make": [
+            "1. Season chicken with herbs",
+            "2. Bake with vegetables at 375°F",
+            "3. Cook rice separately",
+            "4. Drizzle with olive oil and lemon"
+          ],
+          "reason_why_we_recommend": "Well-rounded dinner with lean protein and plenty of vegetables"
+        },
+        "recipe2": {
+          "food": "Fish with Quinoa",
+          "kcal": 480,
+          "ingredients": [
+            "5 oz white fish",
+            "1/2 cup quinoa",
+            "Steamed asparagus",
+            "1 tbsp butter",
+            "Lemon and herbs",
+            "Cherry tomatoes"
+          ],
+          "how_to_make": [
+            "1. Bake fish with lemon and herbs",
+            "2. Cook quinoa",
+            "3. Steam asparagus",
+            "4. Finish with butter and tomatoes"
+          ],
+          "reason_why_we_recommend": "Light dinner with complete protein and complex carbs"
+        },
+        "recipe3": {
+          "food": "Turkey Meatballs with Pasta",
+          "kcal": 550,
+          "ingredients": [
+            "5 oz turkey meatballs",
+            "1.5 cups whole wheat pasta",
+            "1/2 cup marinara sauce",
+            "2 tbsp parmesan cheese",
+            "Mixed vegetables",
+            "Fresh basil"
+          ],
+          "how_to_make": [
+            "1. Bake turkey meatballs",
+            "2. Cook pasta according to package",
+            "3. Heat marinara sauce",
+            "4. Combine with cheese and vegetables"
+          ],
+          "reason_why_we_recommend": "Satisfying meal with lean protein and whole grains for balanced nutrition"
+        }
+      }
+    },
+    "normal_lose_high_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "High-Protein Smoothie",
+          "kcal": 320,
+          "ingredients": [
+            "1 scoop protein powder",
+            "1 cup unsweetened almond milk",
+            "1/2 banana",
+            "1 cup spinach",
+            "1 tbsp almond butter",
+            "Ice cubes"
+          ],
+          "how_to_make": [
+            "1. Add all ingredients to blender",
+            "2. Blend until smooth",
+            "3. Add ice for desired consistency",
+            "4. Serve immediately"
+          ],
+          "reason_why_we_recommend": "High-protein breakfast that supports muscle while creating caloric deficit"
+        },
+        "recipe2": {
+          "food": "Egg White Omelet with Vegetables",
+          "kcal": 280,
+          "ingredients": [
+            "4 egg whites",
+            "1.5 cups mixed vegetables",
+            "1 slice whole grain toast",
+            "1 tsp olive oil",
+            "Fresh herbs",
+            "Hot sauce"
+          ],
+          "how_to_make": [
+            "1. Sauté vegetables in oil",
+            "2. Add egg whites and herbs",
+            "3. Fold omelet when set",
+            "4. Serve with toast and hot sauce"
+          ],
+          "reason_why_we_recommend": "Low-calorie, high-protein breakfast perfect for weight loss and muscle maintenance"
+        },
+        "recipe3": {
+          "food": "Steel-Cut Oats with Berries",
+          "kcal": 250,
+          "ingredients": [
+            "1/2 cup steel-cut oats",
+            "1 cup water",
+            "1/2 cup mixed berries",
+            "1 tsp cinnamon",
+            "1 tsp stevia",
+            "1 tbsp chopped almonds"
+          ],
+          "how_to_make": [
+            "1. Cook oats in water",
+            "2. Add cinnamon and stevia",
+            "3. Top with berries",
+            "4. Sprinkle with almonds"
+          ],
+          "reason_why_we_recommend": "Fiber-rich breakfast that provides sustained energy for workouts while staying low-calorie"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Large Protein Salad",
+          "kcal": 380,
+          "ingredients": [
+            "5 cups mixed greens",
+            "5 oz grilled chicken",
+            "1/4 cup quinoa",
+            "Cherry tomatoes",
+            "2 tbsp balsamic vinegar",
+            "1 tbsp olive oil"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast",
+            "2. Cook quinoa",
+            "3. Toss greens with vinegar and oil",
+            "4. Top with chicken, quinoa, and tomatoes"
+          ],
+          "reason_why_we_recommend": "High-volume, high-protein meal that keeps you full on fewer calories"
+        },
+        "recipe2": {
+          "food": "Turkey and Vegetable Soup",
+          "kcal": 320,
+          "ingredients": [
+            "3 cups vegetable broth",
+            "4 oz ground turkey",
+            "2 cups mixed vegetables",
+            "1/2 cup white beans",
+            "Fresh herbs",
+            "Lemon juice"
+          ],
+          "how_to_make": [
+            "1. Brown turkey in pot",
+            "2. Add broth and vegetables",
+            "3. Simmer until tender",
+            "4. Add beans, herbs, and lemon"
+          ],
+          "reason_why_we_recommend": "Low-calorie, high-volume meal with lean protein and fiber"
+        },
+        "recipe3": {
+          "food": "Shrimp and Zucchini Noodles",
+          "kcal": 300,
+          "ingredients": [
+            "5 oz shrimp",
+            "3 large zucchini, spiralized",
+            "Cherry tomatoes",
+            "2 tbsp marinara sauce",
+            "1 tbsp olive oil",
+            "Fresh basil"
+          ],
+          "how_to_make": [
+            "1. Spiralize zucchini",
+            "2. Sauté shrimp in olive oil",
+            "3. Add tomatoes and marinara",
+            "4. Serve over zucchini with basil"
+          ],
+          "reason_why_we_recommend": "Low-carb meal with lean protein that satisfies pasta cravings"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Grilled Fish with Vegetables",
+          "kcal": 400,
+          "ingredients": [
+            "6 oz white fish",
+            "3 cups steamed vegetables",
+            "1/2 cup cauliflower rice",
+            "1 tbsp olive oil",
+            "Lemon and herbs",
+            "Garlic"
+          ],
+          "how_to_make": [
+            "1. Grill fish with lemon and herbs",
+            "2. Steam vegetables",
+            "3. Sauté cauliflower rice with garlic",
+            "4. Drizzle with olive oil"
+          ],
+          "reason_why_we_recommend": "High-protein, low-carb dinner perfect for fat loss while maintaining muscle"
+        },
+        "recipe2": {
+          "food": "Chicken and Vegetable Stir Fry",
+          "kcal": 360,
+          "ingredients": [
+            "5 oz chicken breast",
+            "3 cups mixed vegetables",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp sesame oil",
+            "Ginger and garlic",
+            "Green onions"
+          ],
+          "how_to_make": [
+            "1. Cut chicken into strips",
+            "2. Stir-fry with ginger and garlic",
+            "3. Add vegetables and soy sauce",
+            "4. Finish with sesame oil and green onions"
+          ],
+          "reason_why_we_recommend": "Low-calorie, high-volume meal with lean protein for weight loss"
+        },
+        "recipe3": {
+          "food": "Turkey Lettuce Wraps",
+          "kcal": 340,
+          "ingredients": [
+            "5 oz ground turkey",
+            "Large lettuce leaves",
+            "1.5 cups diced vegetables",
+            "1 tbsp low-sodium soy sauce",
+            "1 tsp olive oil",
+            "Fresh herbs"
+          ],
+          "how_to_make": [
+            "1. Cook turkey with oil",
+            "2. Add vegetables and seasonings",
+            "3. Season with herbs",
+            "4. Serve in lettuce cups"
+          ],
+          "reason_why_we_recommend": "Ultra-low carb meal that maximizes protein while minimizing calories"
+        }
+      }
+    },
+    "normal_lose_low_exercise": {
+      "breakfast": {
+        "recipe1": {
+          "food": "Green Smoothie Bowl",
+          "kcal": 220,
+          "ingredients": [
+            "1 cup spinach",
+            "1/2 banana",
+            "1/2 cup berries",
+            "1 cup unsweetened almond milk",
+            "1 tbsp chia seeds",
+            "1 tbsp granola"
+          ],
+          "how_to_make": [
+            "1. Blend spinach, banana, and almond milk",
+            "2. Pour into bowl",
+            "3. Top with berries and chia seeds",
+            "4. Add small amount of granola"
+          ],
+          "reason_why_we_recommend": "Nutrient-dense, low-calorie breakfast that provides essential vitamins"
+        },
+        "recipe2": {
+          "food": "Cottage Cheese and Fruit",
+          "kcal": 200,
+          "ingredients": [
+            "1/2 cup low-fat cottage cheese",
+            "1/2 cup mixed berries",
+            "1 tsp honey",
+            "1 tbsp chopped nuts",
+            "Cinnamon",
+            "Mint"
+          ],
+          "how_to_make": [
+            "1. Place cottage cheese in bowl",
+            "2. Top with berries",
+            "3. Drizzle with honey",
+            "4. Add nuts, cinnamon, and mint"
+          ],
+          "reason_why_we_recommend": "High-protein, low-calorie breakfast that supports weight loss"
+        },
+        "recipe3": {
+          "food": "Vegetable Scramble",
+          "kcal": 240,
+          "ingredients": [
+            "2 eggs",
+            "1.5 cups mixed vegetables",
+            "1 tbsp low-fat cheese",
+            "1 tsp olive oil",
+            "Fresh herbs",
+            "Black pepper"
+          ],
+          "how_to_make": [
+            "1. Heat oil in non-stick pan",
+            "2. Sauté vegetables",
+            "3. Add beaten eggs and herbs",
+            "4. Top with cheese and pepper"
+          ],
+          "reason_why_we_recommend": "Protein-rich breakfast with plenty of vegetables for balanced nutrition"
+        }
+      },
+      "lunch": {
+        "recipe1": {
+          "food": "Large Garden Salad",
+          "kcal": 300,
+          "ingredients": [
+            "5 cups mixed greens",
+            "3 oz grilled chicken",
+            "1/2 cup chickpeas",
+            "Cherry tomatoes",
+            "2 tbsp balsamic vinegar",
+            "1 tbsp olive oil"
+          ],
+          "how_to_make": [
+            "1. Grill chicken breast",
+            "2. Combine greens and vegetables",
+            "3. Add chickpeas and chicken",
+            "4. Dress with vinegar and oil"
+          ],
+          "reason_why_we_recommend": "High-fiber meal with lean protein that keeps you full on fewer calories"
+        },
+        "recipe2": {
+          "food": "Vegetable Broth Soup",
+          "kcal": 280,
+          "ingredients": [
+            "2 cups vegetable broth",
+            "2 cups mixed vegetables",
+            "1/2 cup white beans",
+            "3 oz lean protein",
+            "Fresh herbs",
+            "Lemon juice"
+          ],
+          "how_to_make": [
+            "1. Heat broth in pot",
+            "2. Add vegetables and simmer",
+            "3. Add beans and protein",
+            "4. Season with herbs and lemon"
+          ],
+          "reason_why_we_recommend": "Low-calorie, filling soup that provides nutrients and satisfaction"
+        },
+        "recipe3": {
+          "food": "Turkey and Avocado Lettuce Wraps",
+          "kcal": 320,
+          "ingredients": [
+            "4 oz sliced turkey",
+            "Large lettuce leaves",
+            "1/4 avocado",
+            "Cucumber and tomato",
+            "1 tbsp hummus",
+            "Sprouts"
+          ],
+          "how_to_make": [
+            "1. Lay out lettuce leaves",
+            "2. Spread with hummus",
+            "3. Add turkey and avocado",
+            "4. Top with vegetables and sprouts"
+          ],
+          "reason_why_we_recommend": "Low-carb, high-protein meal with healthy fats for gentle weight loss"
+        }
+      },
+      "dinner": {
+        "recipe1": {
+          "food": "Baked Chicken with Steamed Vegetables",
+          "kcal": 380,
+          "ingredients": [
+            "5 oz chicken breast",
+            "3 cups steamed vegetables",
+            "1/2 cup quinoa",
+            "1 tbsp olive oil",
+            "Fresh herbs",
+            "Lemon"
+          ],
+          "how_to_make": [
+            "1. Season chicken with herbs",
+            "2. Bake at 375°F for 25 minutes",
+            "3. Steam vegetables",
+            "4. Cook quinoa and drizzle with oil"
+          ],
+          "reason_why_we_recommend": "Lean protein with plenty of vegetables for balanced, low-calorie nutrition"
+        },
+        "recipe2": {
+          "food": "Fish with Roasted Vegetables",
+          "kcal": 350,
+          "ingredients": [
+            "5 oz white fish",
+            "3 cups roasted vegetables",
+            "1 tbsp olive oil",
+            "Lemon and herbs",
+            "Garlic",
+            "Black pepper"
+          ],
+          "how_to_make": [
+            "1. Season fish with lemon and herbs",
+            "2. Roast vegetables with garlic and oil",
+            "3. Bake fish for 15 minutes",
+            "4. Serve together with pepper"
+          ],
+          "reason_why_we_recommend": "Light dinner with omega-3s and plenty of fiber-rich vegetables"
+        },
+        "recipe3": {
+          "food": "Tofu and Vegetable Curry",
+          "kcal": 340,
+          "ingredients": [
+            "5 oz firm tofu",
+            "2 cups mixed vegetables",
+            "1/2 cup light coconut milk",
+            "1 tbsp curry powder",
+            "1/3 cup brown rice",
+            "Fresh cilantro"
+          ],
+          "how_to_make": [
+            "1. Press and cube tofu",
+            "2. Sauté with curry powder",
+            "3. Add vegetables and coconut milk",
+            "4. Serve over small portion of rice"
+          ],
+          "reason_why_we_recommend": "Plant-based protein with vegetables and spices for healthy weight loss"
+        }
+      }
+    },
+    "overweight_gain_low_exercise": {
+    "breakfast": {
+      "recipe1": {
+        "food": "Hearty Breakfast Plate",
+        "kcal": 520,
+        "ingredients": [
+          "2 eggs",
+          "3 strips turkey bacon",
+          "2 slices whole grain toast",
+          "1 tbsp butter",
+          "1/2 cup fresh fruit",
+          "Coffee"
+        ],
+        "how_to_make": [
+          "1. Cook eggs over easy",
+          "2. Cook turkey bacon until crispy",
+          "3. Toast bread and add butter",
+          "4. Serve with fresh fruit and coffee"
+        ],
+        "reason_why_we_recommend": "Balanced breakfast that provides steady calories for gradual muscle gain"
+      },
+      "recipe2": {
+        "food": "Protein Smoothie Bowl",
+        "kcal": 480,
+        "ingredients": [
+          "1 cup whole milk",
+          "1/2 banana",
+          "1/2 cup mixed berries",
+          "2 tbsp granola",
+          "1 tbsp almond butter",
+          "1 tsp honey"
+        ],
+        "how_to_make": [
+          "1. Blend milk and banana until smooth",
+          "2. Pour into serving bowl",
+          "3. Top with berries and granola",
+          "4. Add almond butter and drizzle with honey"
+        ],
+        "reason_why_we_recommend": "Nutrient-dense breakfast that supports healthy weight gain"
+      },
+      "recipe3": {
+        "food": "Oatmeal with Additions",
+        "kcal": 450,
+        "ingredients": [
+          "1 cup cooked oatmeal",
+          "1/2 sliced banana",
+          "2 tbsp chopped walnuts",
+          "1 tbsp honey",
+          "1/4 cup blueberries",
+          "Cinnamon powder"
+        ],
+        "how_to_make": [
+          "1. Cook oatmeal with milk until creamy",
+          "2. Add sliced banana on top",
+          "3. Sprinkle with walnuts and berries",
+          "4. Drizzle with honey and add cinnamon"
+        ],
+        "reason_why_we_recommend": "Fiber-rich breakfast with healthy calories for sustainable weight gain"
+      }
+    },
+    "lunch": {
+      "recipe1": {
+        "food": "Turkey Club Sandwich",
+        "kcal": 580,
+        "ingredients": [
+          "6 oz sliced turkey breast",
+          "3 slices whole grain bread",
+          "2 tbsp mayonnaise",
+          "Lettuce and tomato slices",
+          "2 strips cooked bacon",
+          "Side garden salad"
+        ],
+        "how_to_make": [
+          "1. Toast bread slices golden brown",
+          "2. Cook bacon until crispy",
+          "3. Layer turkey, bacon, lettuce, and tomato",
+          "4. Serve with fresh side salad"
+        ],
+        "reason_why_we_recommend": "Protein-rich sandwich that provides calories and satisfaction for weight gain"
+      },
+      "recipe2": {
+        "food": "Chicken Caesar Salad",
+        "kcal": 520,
+        "ingredients": [
+          "5 oz grilled chicken breast",
+          "4 cups romaine lettuce",
+          "3 tbsp caesar dressing",
+          "1/4 cup croutons",
+          "3 tbsp parmesan cheese",
+          "Lemon wedge"
+        ],
+        "how_to_make": [
+          "1. Grill seasoned chicken breast",
+          "2. Chop romaine lettuce",
+          "3. Toss lettuce with caesar dressing",
+          "4. Top with chicken, croutons, and cheese"
+        ],
+        "reason_why_we_recommend": "Classic salad with adequate protein and calories for muscle support"
+      },
+      "recipe3": {
+        "food": "Beef and Vegetable Soup",
+        "kcal": 550,
+        "ingredients": [
+          "5 oz lean ground beef",
+          "2 cups mixed vegetables",
+          "2 cups beef broth",
+          "1 cup diced potatoes",
+          "1 whole grain dinner roll",
+          "1 tbsp butter"
+        ],
+        "how_to_make": [
+          "1. Brown ground beef in large pot",
+          "2. Add vegetables, broth, and potatoes",
+          "3. Simmer for 30 minutes until tender",
+          "4. Serve with buttered dinner roll"
+        ],
+        "reason_why_we_recommend": "Hearty soup that provides protein and comfort for healthy weight gain"
+      }
+    },
+    "dinner": {
+      "recipe1": {
+        "food": "Baked Salmon with Sides",
+        "kcal": 680,
+        "ingredients": [
+          "6 oz salmon fillet",
+          "1 cup rice pilaf",
+          "2 cups roasted vegetables",
+          "2 tbsp olive oil",
+          "Lemon and fresh dill",
+          "1 tbsp butter"
+        ],
+        "how_to_make": [
+          "1. Bake salmon with lemon and dill at 400°F",
+          "2. Prepare rice pilaf according to package",
+          "3. Roast vegetables with olive oil",
+          "4. Add butter to rice before serving"
+        ],
+        "reason_why_we_recommend": "Omega-3 rich dinner with complex carbs for balanced nutrition"
+      },
+      "recipe2": {
+        "food": "Chicken Parmesan",
+        "kcal": 720,
+        "ingredients": [
+          "6 oz chicken breast",
+          "1.5 cups whole wheat pasta",
+          "1/2 cup marinara sauce",
+          "1/4 cup mozzarella cheese",
+          "2 tbsp parmesan cheese",
+          "Fresh basil leaves"
+        ],
+        "how_to_make": [
+          "1. Bread and bake chicken until golden",
+          "2. Cook pasta according to package directions",
+          "3. Top chicken with sauce and cheese",
+          "4. Serve over pasta with fresh basil"
+        ],
+        "reason_why_we_recommend": "Comforting meal that provides protein and carbs for muscle building"
+      },
+      "recipe3": {
+        "food": "Beef Stir Fry",
+        "kcal": 650,
+        "ingredients": [
+          "5 oz lean beef strips",
+          "1.5 cups jasmine rice",
+          "2 cups mixed stir-fry vegetables",
+          "2 tbsp teriyaki sauce",
+          "1 tbsp sesame oil",
+          "2 green onions chopped"
+        ],
+        "how_to_make": [
+          "1. Cook jasmine rice until fluffy",
+          "2. Stir-fry beef strips until browned",
+          "3. Add vegetables and teriyaki sauce",
+          "4. Finish with sesame oil and green onions"
+        ],
+        "reason_why_we_recommend": "Balanced meal with protein and carbs for steady muscle gain"
+      }
+    }
+  },
+  "overweight_maintain_high_exercise": {
+    "breakfast": {
+      "recipe1": {
+        "food": "Athletic Breakfast Bowl",
+        "kcal": 420,
+        "ingredients": [
+          "1/2 cup steel-cut oats",
+          "1 scoop whey protein powder",
+          "1/2 banana sliced",
+          "1 tbsp natural almond butter",
+          "1/4 cup mixed berries",
+          "1 tsp ground cinnamon"
+        ],
+        "how_to_make": [
+          "1. Cook steel-cut oats in water until tender",
+          "2. Mix in protein powder while oats are warm",
+          "3. Top with sliced banana and berries",
+          "4. Add almond butter and sprinkle with cinnamon"
+        ],
+        "reason_why_we_recommend": "Balanced pre-workout meal with sustained energy carbs and muscle-supporting protein"
+      },
+      "recipe2": {
+        "food": "Power Egg Scramble",
+        "kcal": 380,
+        "ingredients": [
+          "3 whole eggs",
+          "2 cups mixed bell peppers and spinach",
+          "1 slice whole grain toast",
+          "1 tbsp olive oil",
+          "2 tbsp reduced-fat cheddar cheese",
+          "Fresh parsley and chives"
+        ],
+        "how_to_make": [
+          "1. Heat olive oil in non-stick pan",
+          "2. Sauté bell peppers and spinach until tender",
+          "3. Add beaten eggs and scramble gently",
+          "4. Top with cheese and serve with toast"
+        ],
+        "reason_why_we_recommend": "High-protein breakfast with vegetables for balanced nutrition and workout fuel"
+      },
+      "recipe3": {
+        "food": "Greek Yogurt Power Bowl",
+        "kcal": 400,
+        "ingredients": [
+          "1 cup plain Greek yogurt",
+          "1/4 cup low-sugar granola",
+          "1/2 cup mixed berries",
+          "1 tbsp raw honey",
+          "2 tbsp chopped walnuts",
+          "Fresh mint leaves"
+        ],
+        "how_to_make": [
+          "1. Place Greek yogurt in serving bowl",
+          "2. Layer with granola and mixed berries",
+          "3. Drizzle with honey",
+          "4. Top with walnuts and fresh mint"
+        ],
+        "reason_why_we_recommend": "Protein-rich breakfast with probiotics and antioxidants for recovery and immune support"
+      }
+    },
+    "lunch": {
+      "recipe1": {
+        "food": "Athletic Power Salad",
+        "kcal": 480,
+        "ingredients": [
+          "5 cups mixed greens",
+          "5 oz grilled chicken breast",
+          "1/2 cup cooked quinoa",
+          "1/4 ripe avocado",
+          "1 cup cherry tomatoes",
+          "2 tbsp balsamic vinaigrette"
+        ],
+        "how_to_make": [
+          "1. Grill seasoned chicken breast until cooked through",
+          "2. Cook quinoa according to package directions",
+          "3. Combine mixed greens with quinoa in large bowl",
+          "4. Top with chicken, avocado, tomatoes, and dressing"
+        ],
+        "reason_why_we_recommend": "Complete protein meal with complex carbs perfect for maintaining energy during active lifestyles"
+      },
+      "recipe2": {
+        "food": "Turkey Hummus Wrap",
+        "kcal": 450,
+        "ingredients": [
+          "1 large whole wheat tortilla",
+          "5 oz lean sliced turkey",
+          "3 tbsp hummus",
+          "1/2 cup mixed raw vegetables",
+          "2 cups baby spinach",
+          "2 tbsp crumbled feta cheese"
+        ],
+        "how_to_make": [
+          "1. Spread hummus evenly on tortilla",
+          "2. Layer turkey and fresh vegetables",
+          "3. Add baby spinach and crumble feta on top",
+          "4. Roll tightly and slice in half"
+        ],
+        "reason_why_we_recommend": "Balanced meal with lean protein and healthy fats for sustained energy throughout training"
+      },
+      "recipe3": {
+        "food": "Salmon Quinoa Power Bowl",
+        "kcal": 520,
+        "ingredients": [
+          "5 oz grilled salmon fillet",
+          "1/2 cup cooked quinoa",
+          "2 cups roasted mixed vegetables",
+          "2 tbsp tahini dressing",
+          "1/2 cup cucumber slices",
+          "Fresh dill sprigs"
+        ],
+        "how_to_make": [
+          "1. Grill salmon with fresh dill and lemon",
+          "2. Cook quinoa until fluffy",
+          "3. Roast mixed vegetables until tender",
+          "4. Combine all ingredients with tahini dressing"
+        ],
+        "reason_why_we_recommend": "Omega-3 rich meal with complete protein for muscle growth and recovery"
+      }
+    },
+    "dinner": {
+      "recipe1": {
+        "food": "Lean Beef with Sweet Potato",
+        "kcal": 550,
+        "ingredients": [
+          "5 oz lean sirloin steak",
+          "1 medium roasted sweet potato",
+          "2 cups steamed green vegetables",
+          "1 tbsp olive oil",
+          "Fresh rosemary and thyme",
+          "2 cloves garlic minced"
+        ],
+        "how_to_make": [
+          "1. Grill steak with fresh herbs to desired doneness",
+          "2. Roast sweet potato until tender",
+          "3. Steam green vegetables until crisp-tender",
+          "4. Sauté garlic in olive oil and drizzle over vegetables"
+        ],
+        "reason_why_we_recommend": "High-quality protein with complex carbs for muscle maintenance and recovery"
+      },
+      "recipe2": {
+        "food": "Chicken Vegetable Stir Fry",
+        "kcal": 480,
+        "ingredients": [
+          "5 oz chicken breast strips",
+          "3 cups mixed stir-fry vegetables",
+          "1/2 cup cooked brown rice",
+          "2 tbsp low-sodium teriyaki sauce",
+          "1 tbsp sesame oil",
+          "1 tbsp fresh ginger minced"
+        ],
+        "how_to_make": [
+          "1. Cook brown rice according to package",
+          "2. Stir-fry chicken with fresh ginger",
+          "3. Add vegetables and teriyaki sauce",
+          "4. Finish with sesame oil and serve over rice"
+        ],
+        "reason_why_we_recommend": "Balanced meal with lean protein and vegetables for active recovery"
+      },
+      "recipe3": {
+        "food": "Fish with Quinoa",
+        "kcal": 460,
+        "ingredients": [
+          "5 oz white fish fillet",
+          "1/2 cup cooked quinoa",
+          "2 cups steamed asparagus",
+          "1 tbsp olive oil",
+          "Lemon juice and fresh herbs",
+          "1 cup cherry tomatoes"
+        ],
+        "how_to_make": [
+          "1. Bake fish with lemon juice and herbs",
+          "2. Cook quinoa until fluffy",
+          "3. Steam asparagus until tender",
+          "4. Combine with olive oil and cherry tomatoes"
+        ],
+        "reason_why_we_recommend": "Light but satisfying meal with lean protein and whole grains"
+      }
+    }
+  },
+  "overweight_maintain_low_exercise": {
+    "breakfast": {
+      "recipe1": {
+        "food": "Balanced Morning Plate",
+        "kcal": 320,
+        "ingredients": [
+          "2 eggs cooked any style",
+          "1 slice whole grain toast",
+          "1/2 ripe avocado",
+          "1/2 cup cherry tomatoes",
+          "1 tsp olive oil",
+          "Fresh black pepper"
+        ],
+        "how_to_make": [
+          "1. Cook eggs to your preference",
+          "2. Toast bread until golden",
+          "3. Mash avocado with olive oil and pepper",
+          "4. Serve with fresh cherry tomatoes"
+        ],
+        "reason_why_we_recommend": "Balanced breakfast with healthy fats and protein for steady energy"
+      },
+      "recipe2": {
+        "food": "Yogurt and Granola Bowl",
+        "kcal": 300,
+        "ingredients": [
+          "1 cup plain Greek yogurt",
+          "1/4 cup homemade granola",
+          "1/2 cup mixed berries",
+          "1 tbsp raw honey",
+          "1 tbsp chopped almonds",
+          "Ground cinnamon"
+        ],
+        "how_to_make": [
+          "1. Place yogurt in serving bowl",
+          "2. Layer with granola and berries",
+          "3. Drizzle with honey",
+          "4. Top with almonds and cinnamon"
+        ],
+        "reason_why_we_recommend": "Protein-rich breakfast with probiotics for digestive health"
+      },
+      "recipe3": {
+        "food": "Vegetable Omelet",
+        "kcal": 280,
+        "ingredients": [
+          "2 large eggs",
+          "1 cup mixed vegetables",
+          "2 tbsp shredded cheese",
+          "1 tsp olive oil",
+          "Fresh herbs",
+          "1 slice whole grain toast"
+        ],
+        "how_to_make": [
+          "1. Sauté vegetables in olive oil",
+          "2. Beat eggs and pour into pan",
+          "3. Add cheese and fold omelet",
+          "4. Serve with toast and fresh herbs"
+        ],
+        "reason_why_we_recommend": "Protein and vegetable-rich breakfast for balanced nutrition"
+      }
+    },
+    "lunch": {
+      "recipe1": {
+        "food": "Mediterranean Chicken Salad",
+        "kcal": 420,
+        "ingredients": [
+          "4 cups mixed greens",
+          "4 oz grilled chicken breast",
+          "1/4 cup cooked quinoa",
+          "1 cup cherry tomatoes",
+          "2 tbsp crumbled feta cheese",
+          "2 tbsp olive oil vinaigrette"
+        ],
+        "how_to_make": [
+          "1. Grill chicken breast with Mediterranean herbs",
+          "2. Cook quinoa according to package",
+          "3. Combine greens with vegetables and quinoa",
+          "4. Top with chicken, feta, and dressing"
+        ],
+        "reason_why_we_recommend": "Mediterranean flavors with lean protein and healthy fats"
+      },
+      "recipe2": {
+        "food": "Turkey and Avocado Sandwich",
+        "kcal": 380,
+        "ingredients": [
+          "2 slices whole grain bread",
+          "4 oz sliced turkey breast",
+          "1/4 ripe avocado",
+          "Lettuce and tomato slices",
+          "1 tbsp Dijon mustard",
+          "Small side salad"
+        ],
+        "how_to_make": [
+          "1. Toast bread slices lightly",
+          "2. Layer turkey and mashed avocado",
+          "3. Add lettuce, tomato, and mustard",
+          "4. Serve with fresh side salad"
+        ],
+        "reason_why_we_recommend": "Balanced sandwich with lean protein and healthy fats"
+      },
+      "recipe3": {
+        "food": "Vegetable Soup with Protein",
+        "kcal": 350,
+        "ingredients": [
+          "2 cups low-sodium vegetable broth",
+          "2 cups mixed vegetables",
+          "4 oz lean protein (chicken or fish)",
+          "1/2 cup white beans",
+          "Fresh herbs",
+          "1 small whole grain roll"
+        ],
+        "how_to_make": [
+          "1. Heat broth in large pot",
+          "2. Add vegetables and protein",
+          "3. Simmer with beans until tender",
+          "4. Serve with herbs and whole grain roll"
+        ],
+        "reason_why_we_recommend": "Nutrient-dense soup with adequate protein for satisfaction"
+      }
+    },
+    "dinner": {
+      "recipe1": {
+        "food": "Herb-Crusted Chicken",
+        "kcal": 480,
+        "ingredients": [
+          "5 oz chicken breast",
+          "2 cups roasted vegetables",
+          "1/2 cup brown rice",
+          "2 tbsp olive oil",
+          "Fresh herbs mixture",
+          "Lemon wedges"
+        ],
+        "how_to_make": [
+          "1. Season chicken with fresh herbs",
+          "2. Bake at 375°F for 25 minutes",
+          "3. Roast vegetables with olive oil",
+          "4. Cook rice and serve with lemon"
+        ],
+        "reason_why_we_recommend": "Well-balanced dinner with lean protein and vegetables"
+      },
+      "recipe2": {
+        "food": "Baked Fish with Quinoa",
+        "kcal": 450,
+        "ingredients": [
+          "5 oz white fish fillet",
+          "1/2 cup cooked quinoa",
+          "2 cups steamed broccoli",
+          "1 tbsp butter",
+          "Lemon juice and fresh dill",
+          "1 cup cherry tomatoes"
+        ],
+        "how_to_make": [
+          "1. Bake fish with lemon and dill",
+          "2. Cook quinoa until fluffy",
+          "3. Steam broccoli until tender",
+          "4. Add butter and serve with tomatoes"
+        ],
+        "reason_why_we_recommend": "Light dinner with complete protein and complex carbs"
+      },
+      "recipe3": {
+        "food": "Turkey Meatballs with Pasta",
+        "kcal": 520,
+        "ingredients": [
+          "5 oz lean turkey meatballs",
+          "1.5 cups whole wheat pasta",
+          "1/2 cup marinara sauce",
+          "2 tbsp grated parmesan",
+          "2 cups steamed vegetables",
+          "Fresh basil leaves"
+        ],
+        "how_to_make": [
+          "1. Bake turkey meatballs until cooked",
+          "2. Cook pasta according to package",
+          "3. Heat marinara sauce",
+          "4. Combine with vegetables, cheese, and basil"
+        ],
+        "reason_why_we_recommend": "Satisfying meal with lean protein and whole grains"
+      }
+    }
+  },
+  "overweight_lose_high_exercise": {
+    "breakfast": {
+      "recipe1": {
+        "food": "High-Protein Fat Loss Smoothie",
+        "kcal": 280,
+        "ingredients": [
+          "1 scoop whey protein powder",
+          "1 cup unsweetened almond milk",
+          "1/2 banana",
+          "2 cups fresh spinach",
+          "1 tbsp chia seeds",
+          "Ice cubes"
+        ],
+        "how_to_make": [
+          "1. Add all ingredients to high-speed blender",
+          "2. Blend until completely smooth",
+          "3. Add ice cubes for desired consistency",
+          "4. Serve immediately for best taste"
+        ],
+        "reason_why_we_recommend": "High-protein breakfast that supports muscle while creating caloric deficit for fat loss"
+      },
+      "recipe2": {
+        "food": "Egg White Power Scramble",
+        "kcal": 220,
+        "ingredients": [
+          "5 large egg whites",
+          "2 cups mixed vegetables",
+          "1 slice whole grain toast",
+          "1 tsp olive oil",
+          "Fresh herbs",
+          "Hot sauce to taste"
+        ],
+        "how_to_make": [
+          "1. Sauté mixed vegetables in olive oil",
+          "2. Add egg whites and fresh herbs",
+          "3. Scramble until eggs are set",
+          "4. Serve with toast and hot sauce"
+        ],
+        "reason_why_we_recommend": "Low-calorie, high-protein breakfast perfect for weight loss goals while maintaining muscle"
+      },
+      "recipe3": {
+        "food": "Protein-Enhanced Oatmeal",
+        "kcal": 250,
+        "ingredients": [
+          "1/2 cup steel-cut oats",
+          "1/2 scoop vanilla protein powder",
+          "1/2 cup mixed berries",
+          "1 tsp ground cinnamon",
+          "1 tsp stevia",
+          "1 tbsp chopped almonds"
+        ],
+        "how_to_make": [
+          "1. Cook steel-cut oats in water",
+          "2. Mix in protein powder while warm",
+          "3. Top with berries and almonds",
+          "4. Add cinnamon and stevia for sweetness"
+        ],
+        "reason_why_we_recommend": "Fiber and protein-rich breakfast for sustained energy during intense workouts"
+      }
+    },
+    "lunch": {
+      "recipe1": {
+        "food": "Large Protein Salad",
+        "kcal": 320,
+        "ingredients": [
+          "6 cups mixed greens",
+          "6 oz grilled chicken breast",
+          "1 cup cherry tomatoes",
+          "1 cup cucumber slices",
+          "2 tbsp balsamic vinegar",
+          "1 tbsp olive oil"
+        ],
+        "how_to_make": [
+          "1. Grill chicken breast with seasonings",
+          "2. Combine greens, tomatoes, and cucumber",
+          "3. Slice chicken and place on top",
+          "4. Dress with vinegar and oil mixture"
+        ],
+        "reason_why_we_recommend": "High-volume, high-protein meal that keeps you full on fewer calories"
+      },
+      "recipe2": {
+        "food": "Turkey and Vegetable Soup",
+        "kcal": 280,
+        "ingredients": [
+          "3 cups low-sodium vegetable broth",
+          "5 oz lean ground turkey",
+          "3 cups mixed vegetables",
+          "1/2 cup white beans",
+          "Fresh herbs",
+          "Lemon juice"
+        ],
+        "how_to_make": [
+          "1. Brown ground turkey in large pot",
+          "2. Add broth and mixed vegetables",
+          "3. Simmer until vegetables are tender",
+          "4. Add beans, herbs, and lemon juice"
+        ],
+        "reason_why_we_recommend": "Low-calorie, high-volume meal with lean protein and fiber"
+      },
+      "recipe3": {
+        "food": "Shrimp Zucchini Noodles",
+        "kcal": 260,
+        "ingredients": [
+          "6 oz large shrimp",
+          "4 large zucchini, spiralized",
+          "1 cup cherry tomatoes",
+          "2 tbsp marinara sauce",
+          "1 tbsp olive oil",
+          "Fresh basil leaves"
+        ],
+        "how_to_make": [
+          "1. Spiralize zucchini into noodle shapes",
+          "2. Sauté shrimp in olive oil",
+          "3. Add tomatoes and marinara sauce",
+          "4. Serve over zucchini noodles with basil"
+        ],
+        "reason_why_we_recommend": "Low-carb meal with lean protein that satisfies pasta cravings without excess calories"
+      }
+    },
+    "dinner": {
+      "recipe1": {
+        "food": "Grilled Fish with Vegetables",
+        "kcal": 350,
+        "ingredients": [
+          "6 oz white fish fillet",
+          "4 cups steamed mixed vegetables",
+          "1/2 cup cauliflower rice",
+          "1 tbsp olive oil",
+          "Lemon juice and herbs",
+          "2 cloves garlic minced"
+        ],
+        "how_to_make": [
+          "1. Grill fish with lemon juice and herbs",
+          "2. Steam mixed vegetables until tender",
+          "3. Sauté cauliflower rice with garlic",
+          "4. Drizzle everything with olive oil"
+        ],
+        "reason_why_we_recommend": "High-protein, low-carb dinner perfect for fat loss while maintaining muscle mass"
+      },
+      "recipe2": {
+        "food": "Chicken Vegetable Stir Fry",
+        "kcal": 320,
+        "ingredients": [
+          "6 oz chicken breast strips",
+          "4 cups mixed stir-fry vegetables",
+          "1 tbsp low-sodium soy sauce",
+          "1 tsp sesame oil",
+          "Fresh ginger and garlic",
+          "2 green onions chopped"
+        ],
+        "how_to_make": [
+          "1. Cut chicken into thin strips",
+          "2. Stir-fry with ginger and garlic",
+          "3. Add vegetables and soy sauce",
+          "4. Finish with sesame oil and green onions"
+        ],
+        "reason_why_we_recommend": "Low-calorie, high-volume meal with lean protein for effective weight loss"
+      },
+      "recipe3": {
+        "food": "Turkey Lettuce Wraps",
+        "kcal": 300,
+        "ingredients": [
+          "6 oz lean ground turkey",
+          "12 large lettuce leaves",
+          "2 cups diced vegetables",
+          "1 tbsp low-sodium soy sauce",
+          "1 tsp olive oil",
+          "Fresh cilantro and mint"
+        ],
+        "how_to_make": [
+          "1. Cook ground turkey with olive oil",
+          "2. Add diced vegetables and seasonings",
+          "3. Season with fresh herbs",
+          "4. Serve mixture in lettuce leaf cups"
+        ],
+        "reason_why_we_recommend": "Ultra-low carb meal that maximizes protein while minimizing calories for fat loss"
+      }
+    }
+  },
+  "overweight_lose_low_exercise": {
+    "breakfast": {
+      "recipe1": {
+        "food": "Nutrient-Dense Green Smoothie",
+        "kcal": 180,
+        "ingredients": [
+          "2 cups fresh spinach",
+          "1/2 green apple",
+          "1/2 banana",
+          "1 cup water",
+          "1 tbsp chia seeds",
+          "Ice cubes"
+        ],
+        "how_to_make": [
+          "1. Add all ingredients to blender",
+          "2. Blend until completely smooth",
+          "3. Add ice cubes for desired consistency",
+          "4. Serve chilled for best taste"
+        ],
+        "reason_why_we_recommend": "Nutrient-dense, very low-calorie breakfast for gentle weight loss"
+      },
+      "recipe2": {
+        "food": "Cottage Cheese Berry Bowl",
+        "kcal": 160,
+        "ingredients": [
+          "1/2 cup low-fat cottage cheese",
+          "1/2 cup mixed berries",
+          "1 tsp raw honey",
+          "1 tbsp chopped almonds",
+          "Ground cinnamon",
+          "Fresh mint leaves"
+        ],
+        "how_to_make": [
+          "1. Place cottage cheese in serving bowl",
+          "2. Top with fresh mixed berries",
+          "3. Drizzle with honey",
+          "4. Add almonds, cinnamon, and mint"
+        ],
+        "reason_why_we_recommend": "High-protein, low-calorie breakfast that supports gradual weight loss"
+      },
+      "recipe3": {
+        "food": "Vegetable Egg Scramble",
+        "kcal": 200,
+        "ingredients": [
+          "2 large eggs",
+          "2 cups mixed vegetables",
+          "1 tbsp low-fat cheese",
+          "1 tsp olive oil",
+          "Fresh herbs",
+          "Black pepper to taste"
+        ],
+        "how_to_make": [
+          "1. Sauté mixed vegetables in olive oil",
+          "2. Add beaten eggs to the pan",
+          "3. Scramble gently with cheese",
+          "4. Season with herbs and black pepper"
+        ],
+        "reason_why_we_recommend": "Protein-rich breakfast with plenty of vegetables for satiety and weight loss"
+      }
+    },
+    "lunch": {
+      "recipe1": {
+        "food": "Large Garden Salad",
+        "kcal": 250,
+        "ingredients": [
+          "6 cups mixed greens",
+          "4 oz grilled chicken breast",
+          "1 cup cherry tomatoes",
+          "1 cup cucumber slices",
+          "2 tbsp balsamic vinegar",
+          "1 tbsp olive oil"
+        ],
+        "how_to_make": [
+          "1. Grill chicken breast with herbs",
+          "2. Combine greens, tomatoes, and cucumber",
+          "3. Slice chicken and place on salad",
+          "4. Dress lightly with vinegar and oil"
+        ],
+        "reason_why_we_recommend": "High-fiber meal with lean protein that keeps you full on minimal calories"
+      },
+      "recipe2": {
+        "food": "Vegetable Broth Soup",
+        "kcal": 220,
+        "ingredients": [
+          "3 cups low-sodium vegetable broth",
+          "3 cups mixed vegetables",
+          "1/2 cup white beans",
+          "3 oz lean protein",
+          "Fresh herbs",
+          "Lemon juice"
+        ],
+        "how_to_make": [
+          "1. Heat vegetable broth in large pot",
+          "2. Add mixed vegetables and simmer",
+          "3. Add beans and lean protein",
+          "4. Season with herbs and lemon juice"
+        ],
+        "reason_why_we_recommend": "Very low-calorie, filling soup with adequate protein for satisfaction"
+      },
+      "recipe3": {
+        "food": "Turkey Lettuce Wraps",
+        "kcal": 240,
+        "ingredients": [
+          "4 oz lean ground turkey",
+          "10 large lettuce leaves",
+          "1.5 cups diced vegetables",
+          "1 tbsp low-sodium soy sauce",
+          "1 tsp sesame oil",
+          "Fresh herbs"
+        ],
+        "how_to_make": [
+          "1. Cook ground turkey with sesame oil",
+          "2. Add diced vegetables and seasonings",
+          "3. Season with fresh herbs",
+          "4. Serve mixture in lettuce leaf cups"
+        ],
+        "reason_why_we_recommend": "Low-carb, high-protein meal for effective and sustainable weight loss"
+      }
+    },
+    "dinner": {
+      "recipe1": {
+        "food": "Baked Chicken with Vegetables",
+        "kcal": 300,
+        "ingredients": [
+          "5 oz chicken breast",
+          "4 cups roasted vegetables",
+          "1 tbsp olive oil",
+          "Fresh herbs",
+          "Lemon juice",
+          "2 cloves garlic minced"
+        ],
+        "how_to_make": [
+          "1. Season chicken with fresh herbs",
+          "2. Bake at 375°F for 25 minutes",
+          "3. Roast vegetables with oil and garlic",
+          "4. Serve with fresh lemon juice"
+        ],
+        "reason_why_we_recommend": "Simple, clean meal with lean protein and lots of fiber-rich vegetables"
+      },
+      "recipe2": {
+        "food": "Fish with Steamed Vegetables",
+        "kcal": 280,
+        "ingredients": [
+          "5 oz white fish fillet",
+          "4 cups steamed vegetables",
+          "1 tbsp olive oil",
+          "Lemon juice and fresh dill",
+          "2 cloves garlic",
+          "Black pepper"
+        ],
+        "how_to_make": [
+          "1. Bake fish with lemon and dill",
+          "2. Steam mixed vegetables until tender",
+          "3. Season vegetables with garlic",
+          "4. Drizzle lightly with olive oil"
+        ],
+        "reason_why_we_recommend": "Very light dinner with omega-3s and plenty of fiber-rich vegetables"
+      },
+      "recipe3": {
+        "food": "Tofu Vegetable Stir Fry",
+        "kcal": 260,
+        "ingredients": [
+          "5 oz firm tofu",
+          "3 cups mixed vegetables",
+          "1 tbsp low-sodium soy sauce",
+          "1 tsp sesame oil",
+          "Fresh ginger and garlic",
+          "2 green onions"
+        ],
+        "how_to_make": [
+          "1. Press and cube firm tofu",
+          "2. Stir-fry with ginger and garlic",
+          "3. Add vegetables and soy sauce",
+          "4. Finish with sesame oil and green onions"
+        ],
+        "reason_why_we_recommend": "Plant-based protein with vegetables for healthy and sustainable weight loss"
+      }
+    }
+  }
+  }
+}

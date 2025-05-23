@@ -17,6 +17,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'; // Firebase 인증 
 import Nutrition from './pages/Nutrition'; //Nutrition main page
 import DietHeader from './components/DietHeader'; //Test 겸용 DietHeader
 import NutritionAnalysis from './pages/NutritionAnalysis'; //NutritionAnalysis 페이지
+import RecipeBook from './pages/RecipeBook'; 
 
 function App() {
   // 모달 상태 관리 (각 모달의 열림/닫힘 상태)
@@ -156,6 +157,10 @@ function App() {
                 <DietPage /> 
               </ProtectedRoute>
             } 
+          />
+          <Route 
+            path="/recipe-book" 
+            element={<RecipeBook />} 
           />
           {/*영양 관리 페이지 내 금일 영양 정보 이동 페이지*/}
           <Route path="/nutrition-analysis" element={
