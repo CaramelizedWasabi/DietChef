@@ -23,18 +23,30 @@ const ProgressTracker = () => {
   const [dailyNutrients, setDailyNutrients] = useState({});
   const [weeklyMeals, setWeeklyMeals] = useState({});
 
-  const generateDatesForWeek = () => {
-    if (!selectedMonth || !selectedWeek) return [];
-    const maxDate = monthDayMap[selectedMonth];
-    const weekNum = parseInt(selectedWeek.split(' ')[1]);
-    const start = (weekNum - 1) * 7 + 1;
-    const dates = [];
-    for (let d = start; d <= maxDate; d++) {
+const generateDatesForWeek = () => {
+  if (!selectedMonth || !selectedWeek) return [];
+
+  const maxDate = monthDayMap[selectedMonth]; // 예: 31
+  const weekIndex = parseInt(selectedWeek.split(' ')[1]) - 1;
+
+  let startDay, endDay;
+
+  if (selectedWeek === 'Week 4') {
+    startDay = 22;
+    endDay = maxDate;
+  } else {
+    startDay = weekIndex * 7 + 1;
+    endDay = startDay + 6;
+  }
+
+  const dates = [];
+  for (let d = startDay; d <= endDay; d++) {
     dates.push(`${selectedMonth} ${d}`);
   }
 
-    return dates;
-  };
+  return dates;
+};
+
 
   useEffect(() => {
     const auth = getAuth();
@@ -205,11 +217,16 @@ const ProgressTracker = () => {
         <div className="week-detail">
           <div className="date-grid">
             {dates.map((date, i) => (
-              <div key={i} className="date-box" onClick={() => handleDateClick(date)}>
+              <div
+                key={i}
+                className={`date-box ${selectedDateForPopup === date ? 'active' : ''}`}
+                onClick={() => handleDateClick(date)}
+              >
                 {date}
               </div>
             ))}
           </div>
+
 
           <div className="nutrient-section">
             <h3 className="nutrient-title">Weekly Nutrient</h3>

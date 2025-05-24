@@ -81,6 +81,10 @@
   font-weight: bold;
   border-radius: 20px;
 }
+.date-box.active {
+  background: #ccc;
+  color: black;
+}
 
 .meal-box {
   display: flex;
