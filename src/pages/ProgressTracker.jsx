@@ -29,9 +29,10 @@ const ProgressTracker = () => {
     const weekNum = parseInt(selectedWeek.split(' ')[1]);
     const start = (weekNum - 1) * 7 + 1;
     const dates = [];
-    for (let d = start; d <= Math.min(start + 6, maxDate); d++) {
-      dates.push(`${selectedMonth} ${d}`);
-    }
+    for (let d = start; d <= maxDate; d++) {
+    dates.push(`${selectedMonth} ${d}`);
+  }
+
     return dates;
   };
 

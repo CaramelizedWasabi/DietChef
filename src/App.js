@@ -17,11 +17,8 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'; // Firebase 인증 
 import Nutrition from './pages/Nutrition'; //Nutrition main page
 import DietHeader from './components/DietHeader'; //Test 겸용 DietHeader
 import NutritionAnalysis from './pages/NutritionAnalysis'; //NutritionAnalysis 페이지
-<<<<<<< HEAD
 import ProgressTracker from './pages/ProgressTracker'; //ProgressTracker 페이지
-=======
 import RecipeBook from './pages/RecipeBook'; 
->>>>>>> origin/main
 
 function App() {
   // 모달 상태 관리 (각 모달의 열림/닫힘 상태)
