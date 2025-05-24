@@ -1,7 +1,7 @@
 // useNutrition.js
 import { useState, useEffect } from 'react';
 import { saveTodayFoodsAndNutrition, loadTodayFoodsAndNutrition } from '../services/saveNutritionToFirebase';
-import { searchFoods } from '../services/foodService'; // foodService 추가
+import { searchFoods } from '../services/foodService'; 
 
 const useNutritionHook = () => {
   // 상태 관리
@@ -38,7 +38,7 @@ const useNutritionHook = () => {
         }
       } catch (error) {
         console.error('데이터 로드 실패:', error);
-        setError('데이터를 불러오는데 실패했습니다.');
+        setError('Failed to retrieve data.');
       } finally {
         setIsLoading(false);
       }
@@ -75,13 +75,13 @@ const useNutritionHook = () => {
         setShowSearchResults(true);
         setError(null);
       } else {
-        setError(`"${searchText}"에 대한 검색 결과가 없습니다.`);
+        setError(`"${searchText}"There are no search results for .`);
         setSearchResults([]);
         setShowSearchResults(false);
       }
     } catch (error) {
       console.error('검색 오류:', error);
-      setError('검색 중 오류가 발생했습니다. 다시 시도해주세요.');
+      setError('An error occurred while searching. Please try again.');
       setSearchResults([]);
       setShowSearchResults(false);
     } finally {
@@ -114,8 +114,8 @@ const useNutritionHook = () => {
       
       console.log('✅ 음식 추가 및 저장 완료');
     } catch (error) {
-      console.error('음식 추가 실패:', error);
-      setError('음식 추가에 실패했습니다.');
+      console.error('Food Addition Failed:', error);
+      setError('Food addition failed.');
     }
   };
 
@@ -135,7 +135,7 @@ const useNutritionHook = () => {
       console.log('✅ 음식 제거 및 저장 완료');
     } catch (error) {
       console.error('음식 제거 실패:', error);
-      setError('음식 제거에 실패했습니다.');
+      setError('Food removal failed.');
     }
   };
 
@@ -165,7 +165,7 @@ const useNutritionHook = () => {
       console.log('✅ 커스텀 음식 추가 및 저장 완료');
     } catch (error) {
       console.error('커스텀 음식 추가 실패:', error);
-      setError('커스텀 음식 추가에 실패했습니다.');
+      setError('Failed to add custom food.');
     }
   };
 
