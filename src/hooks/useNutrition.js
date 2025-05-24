@@ -1,18 +1,10 @@
-// src/hooks/useNutrition.js
-import { useState, useEffect, useCallback } from 'react';
-import {
-  searchFoods,
-  saveConsumedFood,
-  deleteConsumedFood,
-  getTodayConsumedFoods
-} from '../services/foodService';
+// useNutrition.js
+import { useState, useEffect } from 'react';
+import { saveTodayFoodsAndNutrition, loadTodayFoodsAndNutrition } from '../services/saveNutritionToFirebase';
+import { searchFoods } from '../services/foodService'; // foodService 추가
 
-/**
- * 영양 분석 관련 로직을 모아둔 커스텀 훅
- * @returns {Object} - 영양 분석 관련 상태 및 함수들
- */
-function useNutritionHook() {
-  // 상태 정의
+const useNutritionHook = () => {
+  // 상태 관리
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [showSearchResults, setShowSearchResults] = useState(false);
@@ -25,150 +17,193 @@ function useNutritionHook() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  
-  // 모달 관련 상태 추가
   const [showAddModal, setShowAddModal] = useState(false);
   const [lastSearchQuery, setLastSearchQuery] = useState('');
 
-  // 초기 데이터 로드
+  // 컴포넌트 마운트 시 Firebase에서 데이터 로드
   useEffect(() => {
-    const loadInitialData = async () => {
+    const loadData = async () => {
       try {
         setIsLoading(true);
-        const todayFoods = await getTodayConsumedFoods();
-        setConsumedFoods(todayFoods);
+        const data = await loadTodayFoodsAndNutrition();
+        if (data) {
+          setConsumedFoods(data.foods || []);
+          setDailyNutrition({
+            calories: data.calories || 0,
+            carbs: data.carbs || 0,
+            fat: data.fat || 0,
+            protein: data.protein || 0
+          });
+          console.log('✅ 데이터 로드 완료');
+        }
+      } catch (error) {
+        console.error('데이터 로드 실패:', error);
+        setError('데이터를 불러오는데 실패했습니다.');
+      } finally {
         setIsLoading(false);
-      } catch (err) {
-        setError('Failed to load your food data. Please try again later.');
-        setIsLoading(false);
-        console.error('Error loading initial data:', err);
       }
     };
-
-    loadInitialData();
+    
+    loadData();
   }, []);
 
-  // 검색 기능
-  const handleSearch = useCallback(async (e) => {
-    if (e) {
-      e.preventDefault();
-    }
+  // 영양정보 계산 함수
+  const calculateNutrition = (foods) => {
+    return foods.reduce((total, food) => ({
+      calories: total.calories + (food.calories || 0),
+      carbs: total.carbs + (food.carbs || 0),
+      fat: total.fat + (food.fat || 0),
+      protein: total.protein + (food.protein || 0)
+    }), { calories: 0, carbs: 0, fat: 0, protein: 0 });
+  };
+
+  // 검색 함수
+  const handleSearch = async () => {
+    if (!searchText.trim()) return;
     
-    if (searchText.trim() === '') {
+    setIsLoading(true);
+    setError(null);
+    setLastSearchQuery(searchText);
+    
+    try {
+      console.log('검색어:', searchText);
+      const results = await searchFoods(searchText);
+      console.log('검색 결과:', results);
+      
+      if (results && results.length > 0) {
+        setSearchResults(results);
+        setShowSearchResults(true);
+        setError(null);
+      } else {
+        setError(`"${searchText}"에 대한 검색 결과가 없습니다.`);
+        setSearchResults([]);
+        setShowSearchResults(false);
+      }
+    } catch (error) {
+      console.error('검색 오류:', error);
+      setError('검색 중 오류가 발생했습니다. 다시 시도해주세요.');
       setSearchResults([]);
       setShowSearchResults(false);
-      return;
+    } finally {
+      setIsLoading(false);
     }
+  };
 
+  // 음식 추가 함수 (Firebase 저장 포함)
+  const addFood = async (food) => {
     try {
-      setIsLoading(true);
-      setLastSearchQuery(searchText); // 검색 쿼리 저장
-      const results = await searchFoods(searchText);
-      setSearchResults(results);
-      setShowSearchResults(true);
-      
-      // 검색 결과가 없으면 수동 추가 모달 표시
-      if (results.length === 0) {
-        setShowAddModal(true);
-      }
-      
-      setIsLoading(false);
-    } catch (err) {
-      setError('Search failed. Please try again later.');
-      setIsLoading(false);
-      console.error('Error during search:', err);
-    }
-  }, [searchText]);
-
-  // 음식 등록 기능
-  const addFood = useCallback(async (food) => {
-    try {
-      setIsLoading(true);
-      const savedFood = await saveConsumedFood(food);
-      setConsumedFoods(prev => [...prev, savedFood]);
-      setSearchText('');
-      setShowSearchResults(false);
-      setIsLoading(false);
-    } catch (err) {
-      setError('Failed to add food. Please try again.');
-      setIsLoading(false);
-      console.error('Error adding food:', err);
-    }
-  }, []);
-
-  // 수동으로 음식 추가
-  const addCustomFood = useCallback((food) => {
-    // 사용자가 입력한 음식 정보를 저장
-    const customFood = {
-      ...food,
-      entryId: Date.now() // 고유 ID 생성
-    };
-    
-    setConsumedFoods(prev => [...prev, customFood]);
-    setShowAddModal(false);
-    setSearchText('');
-    setShowSearchResults(false);
-  }, []);
-
-  // 음식 삭제 기능
-  const removeFood = useCallback(async (entryId) => {
-    try {
-      setIsLoading(true);
-      const success = await deleteConsumedFood(entryId);
-      if (success) {
-        setConsumedFoods(prev => prev.filter(food => food.entryId !== entryId));
-      } else {
-        setError('Failed to remove food. Please try again.');
-      }
-      setIsLoading(false);
-    } catch (err) {
-      setError('Failed to remove food. Please try again.');
-      setIsLoading(false);
-      console.error('Error removing food:', err);
-    }
-  }, []);
-
-  // 영양소 합계 계산 (consumedFoods가 변경될 때마다 실행)
-  useEffect(() => {
-    const totals = consumedFoods.reduce((acc, food) => {
-      return {
-        calories: acc.calories + food.calories,
-        carbs: acc.carbs + food.carbs,
-        fat: acc.fat + food.fat,
-        protein: acc.protein + food.protein
+      const foodWithId = { 
+        ...food, 
+        id: Date.now() + Math.random(), // 고유 ID 생성
+        addedAt: new Date().toISOString()
       };
-    }, { calories: 0, carbs: 0, fat: 0, protein: 0 });
-    
-    setDailyNutrition(totals);
-  }, [consumedFoods]);
-
-  // 도넛 차트 세그먼트 계산
-  const calculateSegments = useCallback(() => {
-    const total = dailyNutrition.carbs * 4 + dailyNutrition.fat * 9 + dailyNutrition.protein * 4;
-    
-    if (total === 0) {
-      // 등록된 음식이 없는 경우 기본 세그먼트
-      return [
-        { color: '#a9e1a9', percent: 33 }, // 탄수화물
-        { color: '#5a9e8f', percent: 33 }, // 지방
-        { color: '#1a365e', percent: 34 }  // 단백질
-      ];
+      
+      const newFoods = [...consumedFoods, foodWithId];
+      const newNutrition = calculateNutrition(newFoods);
+      
+      // 상태 업데이트
+      setConsumedFoods(newFoods);
+      setDailyNutrition(newNutrition);
+      
+      // Firebase에 저장
+      await saveTodayFoodsAndNutrition(newFoods, newNutrition);
+      
+      // 검색 결과 숨기기
+      setShowSearchResults(false);
+      setSearchText('');
+      
+      console.log('✅ 음식 추가 및 저장 완료');
+    } catch (error) {
+      console.error('음식 추가 실패:', error);
+      setError('음식 추가에 실패했습니다.');
     }
+  };
+
+  // 음식 제거 함수 (Firebase 저장 포함)
+  const removeFood = async (foodId) => {
+    try {
+      const newFoods = consumedFoods.filter(food => food.id !== foodId);
+      const newNutrition = calculateNutrition(newFoods);
+      
+      // 상태 업데이트
+      setConsumedFoods(newFoods);
+      setDailyNutrition(newNutrition);
+      
+      // Firebase에 저장
+      await saveTodayFoodsAndNutrition(newFoods, newNutrition);
+      
+      console.log('✅ 음식 제거 및 저장 완료');
+    } catch (error) {
+      console.error('음식 제거 실패:', error);
+      setError('음식 제거에 실패했습니다.');
+    }
+  };
+
+  // 커스텀 음식 추가 함수
+  const addCustomFood = async (customFood) => {
+    try {
+      const foodWithId = {
+        ...customFood,
+        id: Date.now() + Math.random(),
+        addedAt: new Date().toISOString(),
+        isCustom: true // 커스텀 음식 표시
+      };
+      
+      const newFoods = [...consumedFoods, foodWithId];
+      const newNutrition = calculateNutrition(newFoods);
+      
+      // 상태 업데이트
+      setConsumedFoods(newFoods);
+      setDailyNutrition(newNutrition);
+      
+      // Firebase에 저장
+      await saveTodayFoodsAndNutrition(newFoods, newNutrition);
+      
+      // 모달 닫기
+      setShowAddModal(false);
+      
+      console.log('✅ 커스텀 음식 추가 및 저장 완료');
+    } catch (error) {
+      console.error('커스텀 음식 추가 실패:', error);
+      setError('커스텀 음식 추가에 실패했습니다.');
+    }
+  };
+
+  // 차트용 세그먼트 계산
+  const calculateSegments = () => {
+    const total = dailyNutrition.calories;
+    if (total === 0) return [
+      { name: 'Carbs', value: 0, color: '#8FBC8F' },
+      { name: 'Fat', value: 0, color: '#4682B4' },
+      { name: 'Protein', value: 0, color: '#2F4F4F' }
+    ];
     
     return [
-      { color: '#a9e1a9', percent: (dailyNutrition.carbs * 4 / total) * 100 }, // 탄수화물
-      { color: '#5a9e8f', percent: (dailyNutrition.fat * 9 / total) * 100 },   // 지방
-      { color: '#1a365e', percent: (dailyNutrition.protein * 4 / total) * 100 } // 단백질
+      { 
+        name: 'Carbs', 
+        value: (dailyNutrition.carbs * 4 / total) * 100,
+        color: '#8FBC8F'
+      },
+      { 
+        name: 'Fat', 
+        value: (dailyNutrition.fat * 9 / total) * 100,
+        color: '#4682B4'
+      },
+      { 
+        name: 'Protein', 
+        value: (dailyNutrition.protein * 4 / total) * 100,
+        color: '#2F4F4F'
+      }
     ];
-  }, [dailyNutrition]);
+  };
 
-  // 에러 상태 초기화
-  const clearError = useCallback(() => {
+  // 에러 클리어 함수
+  const clearError = () => {
     setError(null);
-  }, []);
+  };
 
   return {
-    // 상태
+    // 상태들
     searchText,
     searchResults,
     showSearchResults,
@@ -179,7 +214,7 @@ function useNutritionHook() {
     showAddModal,
     lastSearchQuery,
     
-    // 상태 변경 함수
+    // 함수들
     setSearchText,
     handleSearch,
     addFood,
@@ -189,7 +224,6 @@ function useNutritionHook() {
     setShowAddModal,
     addCustomFood
   };
-}
+};
 
-// 명확하게 함수 이름을 다르게 지정하고 기본 내보내기로 useNutrition 이름 사용
 export default useNutritionHook;
