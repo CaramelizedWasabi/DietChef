@@ -44,9 +44,9 @@ const FoodList = ({ consumedFoods, removeFood }) => {
         ) : (
           consumedFoods.map(food => (
             <FoodItem
-              key={food.entryId}
+              key={food.id}
               food={food}
-              onRemove={() => removeFood(food.entryId)}
+              onRemove={() => removeFood(food.id)}
             />
           ))
         )}
