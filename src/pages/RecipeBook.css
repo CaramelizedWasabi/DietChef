@@ -381,6 +381,7 @@
 /* 삭제 버튼에 마우스 올렸을 때 효과 */
 .delete-btn:hover {
   color: #e53e3e;
+  background: transparent;
 }
 
 /* 취소 버튼 - 테두리만 있는 버튼 스타일 */

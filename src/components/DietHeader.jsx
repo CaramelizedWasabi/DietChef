@@ -68,32 +68,43 @@ const DietHeader = () => {
 
   return (
     <>
+      {/* 헤더 전체 영역 */}
       <header className="diet-header">
+        {/* 왼쪽 로고 이미지 */}
         <img src={logo} alt="DietChef Logo" className="logo" />
         
         {/* 오른쪽 탭 메뉴 영역 */}
         <div className="nav-tabs">
+          {/* Diet 탭 버튼 */}
           <button
-            className={`nav-tab ${isActive('/dietpage') ? 'active' : ''}`}
-            onClick={() => handleTabClick('/dietpage')}
+            // className: 기본 스타일은 'nav-tab', 선택된 탭일 경우 'active' 클래스 추가
+            className={`nav-tab ${activeTab === 'diet' ? 'active' : ''}`}
+            // 클릭 시 handleTabClick 함수 실행, 'diet' 탭으로 설정
+            onClick={() => handleTabClick('diet', '/dietpage')}
           >
             Diet
           </button>
+
+          {/* Nutrition 탭 버튼 */}
           <button
-            className={`nav-tab ${isActive('/nutrition') ? 'active' : ''}`}
-            onClick={() => handleTabClick('/nutrition')}
+            className={`nav-tab ${activeTab === 'nutrition' ? 'active' : ''}`}
+            onClick={() => handleTabClick('nutrition', '/nutrition')}
           >
             Nutrition
           </button>
+
+          {/* Food Info 탭 버튼 */}
           <button
-            className={`nav-tab ${isActive('/foodinfo') ? 'active' : ''}`}
-            onClick={() => handleTabClick('/foodinfo')}
+            className={`nav-tab ${activeTab === 'foodInfo' ? 'active' : ''}`}
+            onClick={() => handleTabClick('foodInfo', '/foodinfo')}
           >
             Food Info
           </button>
+
+          {/* Progress 탭 버튼 */}
           <button
-            className={`nav-tab ${isActive('/meal-plan') ? 'active' : ''}`}
-            onClick={() => handleTabClick('/meal-plan')}
+            className={`nav-tab ${activeTab === 'progress' ? 'active' : ''}`}
+            onClick={() => handleTabClick('progress', '/progress')}
           >
             Progress
           </button>

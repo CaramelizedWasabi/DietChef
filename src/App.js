@@ -19,7 +19,6 @@ import DietHeader from './components/DietHeader'; //Test 겸용 DietHeader
 import NutritionAnalysis from './pages/NutritionAnalysis'; //NutritionAnalysis 페이지
 import FoodInfoPage from './pages/FoodInfoPage';
 import FoodDetailPage from './pages/FoodDetailPage';
-import MyMealPlanPage from './pages/MyMealPlanPage';
 import ProgressTracker from './pages/ProgressTracker'; //ProgressTracker 페이지
 import RecipeBook from './pages/RecipeBook'; 
 
@@ -138,9 +137,6 @@ function App() {
           } />
           {/* 기본 페이지 (메인 페이지) */}
           <Route path="/" element={<MainPage />} />
-          <Route path="/foodinfo" element={<FoodInfoPage />} />
-          <Route path="/food-detail" element={<FoodDetailPage />} />
-          <Route path="/meal-plan" element={<MyMealPlanPage />} />
           {/* 인증이 필요한 페이지들 (ProtectedRoute로 감싸서 인증된 사용자만 접근 가능) */}
           <Route 
             path="/complete-profile" 
@@ -178,6 +174,20 @@ function App() {
               <NutritionAnalysis />
             </>
           } />
+          {/* Food Info 페이지 */}
+          <Route path="/foodinfo" element={
+            <>
+              <DietHeader />
+              <FoodInfoPage />
+            </>
+          } />
+          <Route path="/food-detail" element={
+            <>
+              <DietHeader />
+              <FoodDetailPage />
+            </>
+          } />
+          
           {/* 통계 관련 페이지*/}
             <Route path="/progress" element={
              <>
