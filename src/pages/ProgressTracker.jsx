@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import DonutChart from '../components/DonutChart';
 import './ProgressTracker.css';
 import { getAuth } from 'firebase/auth';
-import { getDatabase, ref, onValue } from 'firebase/database';
+import { getDatabase, ref, onValue, get } from 'firebase/database';
 import GoalPopup from '../pages/GoalPopup';
+import MealDeletePopup from '../pages/MealDeletePopup';
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
@@ -20,6 +21,8 @@ const ProgressTracker = () => {
   const [showGoalPopup, setShowGoalPopup] = useState(false);
   const [dailyNutrients, setDailyNutrients] = useState({});
   const [weeklyMeals, setWeeklyMeals] = useState({});
+  const [showDeletePopup, setShowDeletePopup] = useState(false);
+  const [mealsForPopup, setMealsForPopup] = useState([]);
 
   const generateDatesForWeek = () => {
     if (!selectedMonth || !selectedWeek) return [];
@@ -91,6 +94,43 @@ const ProgressTracker = () => {
 
     return () => unsubscribe();
   }, []);
+  const refreshMeals = async () => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    if (!user) return;
+
+    const db = getDatabase();
+    const nutritionRef = ref(db, `users/${user.uid}/nutrition`);
+    const snapshot = await get(nutritionRef);
+
+    if (!snapshot.exists()) return;
+
+    const nutritionData = snapshot.val();
+    const nutrients = {};
+    const meals = {};
+
+  Object.entries(nutritionData).forEach(([date, data]) => {
+    if (data.foods && Array.isArray(data.foods)) {
+      nutrients[date] = {
+        carbs: Math.round(data.carbs || 0),
+        fat: Math.round(data.fat || 0),
+        protein: Math.round(data.protein || 0),
+      };
+      meals[date] = data.foods.map(food => food.name || 'Unknown Food');
+    } else {
+      nutrients[date] = {
+        carbs: Math.round(data.carbs || 0),
+        fat: Math.round(data.fat || 0),
+        protein: Math.round(data.protein || 0),
+      };
+      meals[date] = ['No Meals'];
+    }
+  });
+
+  setDailyNutrients(nutrients);
+  setWeeklyMeals(meals);
+};
+
 
   const backToNutrient = () => setShowMealView(false);
   
@@ -101,7 +141,15 @@ const ProgressTracker = () => {
     setSelectedDateForPopup(null);
   };
 
-  const handleDateClick = (date) => setSelectedDateForPopup(date);
+  const handleDateClick = (date) =>{ 
+    setSelectedDateForPopup(date);
+    setMealsForPopup(weeklyMeals[date] || []);
+    if (showMealView) {
+    setShowDeletePopup(true);
+  } else {
+    setShowDeletePopup(false);
+  }
+  }
   const closePopup = () => setSelectedDateForPopup(null);
 
   const dates = generateDatesForWeek();
@@ -122,7 +170,7 @@ const ProgressTracker = () => {
   const hasWeekData = weekCal > 0;
 
   const renderPopup = () => {
-    if (!selectedDateForPopup) return null;
+    if (!selectedDateForPopup || showDeletePopup) return null; 
     const data = dailyNutrients[selectedDateForPopup];
     const hasNutrition = data && (data.carbs > 0 || data.fat > 0 || data.protein > 0);
     const display = hasNutrition ? data : { carbs: 0, fat: 0, protein: 0 };
@@ -275,7 +323,7 @@ const ProgressTracker = () => {
           <h3 className="nutrient-title">Weekly Meal Plan</h3>
           <div className="date-grid">
             {dates.map((date, i) => (
-              <div key={i} className="meal-box">
+              <div key={i} className="meal-box" onClick={() => handleDateClick(date)}>
                 <div className="meal-date">{date}</div>
                 <div className="meal-list">
                   {(weeklyMeals[date] || ['No Meals']).map((meal, j) => (
@@ -293,6 +341,17 @@ const ProgressTracker = () => {
 
       {renderPopup()}
       {showGoalPopup && <GoalPopup onClose={() => setShowGoalPopup(false)} />}
+        {showDeletePopup && (
+          <MealDeletePopup
+            date={selectedDateForPopup}
+            meals={mealsForPopup}
+            onClose={() => {
+            setShowDeletePopup(false);
+            setSelectedDateForPopup(null);
+            }}
+            onUpdate={refreshMeals}
+          />
+        )}
     </div>
   );
 };
