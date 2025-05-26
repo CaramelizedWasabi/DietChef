@@ -1,0 +1,482 @@
+/* src/pages/RecipeBook.css */
+/* 레시피북 페이지 스타일 */
+
+/* 레시피북 페이지 전체를 감싸는 메인 컨테이너 - 전체 화면 높이로 세로 배치 */
+.recipe-book-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* 레시피북의 주요 콘텐츠가 들어가는 영역 - 헤더 아래 여백 확보 */
+.recipe-book-content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 8vh;
+}
+
+/* 데이터 로딩 중일 때 보여주는 텍스트 - 화면 중앙에 표시 */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* 레시피북 제목과 추가 버튼이 있는 헤더 영역 - 양쪽 끝 배치 */
+.recipe-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 레시피북 제목 스타일 */
+.recipe-book-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* 새 레시피 추가 버튼 - 주황색 배경에 hover 효과 */
+.add-recipe-btn {
+  background: #ff9800;        /* 주황색 배경 */
+  color: white;               /* 흰색 글자 */
+  border: none;               /* 테두리 제거 */
+  padding: 0.8rem 1.5rem;     /* 내부 여백 (세로 12.8px, 가로 24px) */
+  border-radius: 25px;        /* 둥근 모서리 25px */
+  font-size: 1rem;            /* 글자 크기 16px */
+  font-weight: 500;           /* 글자 두께 (미디움) */
+  cursor: pointer;            /* 마우스 올렸을 때 손가락 모양 */
+  transition: all 0.3s ease;  /* 모든 속성 변화에 0.3초 애니메이션 */
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);  /* 그림자 효과 */
+}
+
+/* 추가 버튼에 마우스 올렸을 때 효과 */
+.add-recipe-btn:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+/* 레시피 카드들를 배치하는 그리드 컨테이너 - 자동으로 열 개수 조정 */
+.recipe-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 각각의 레시피 카드 스타일 - 클릭 가능하고 hover 효과 있음 */
+.recipe-card {
+  background: white;           /* 흰색 배경 */
+  border-radius: 15px;         /* 둥근 모서리 15px */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* 연한 그림자 */
+  padding: 1.5rem;             /* 내부 여백 24px */
+  cursor: pointer;             /* 마우스 올렸을 때 손가락 모양 */
+  transition: all 0.3s ease;   /* 모든 속성 변화에 애니메이션 */
+  border: 2px solid transparent;  /* 투명한 테두리 (hover 시 색상 변경용) */
+  height: 150px;               /* 고정 높이 150px */
+  display: flex;               /* Flexbox 사용 */
+  flex-direction: column;      /* 세로 방향 배치 */
+  justify-content: space-between;  /* 위아래 공간 균등 배분 */
+  position: relative;          /* 자식 요소의 절대위치 기준점 */
+}
+
+/* 레시피 카드에 마우스 올렸을 때 효과 */
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #ff9800;
+}
+
+/* 레시피 카드 제목 스타일 */
+.recipe-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+/* 레시피 카드의 칼로리 표시 부분 - 우하단에 절대 위치 */
+.recipe-card-calories {
+  background: #ff9800;     /* 주황색 배경 */
+  color: white;            /* 흰색 글자 */
+  padding: 0.4rem 0.8rem;  /* 내부 여백 (세로 6.4px, 가로 12.8px) */
+  border-radius: 15px;     /* 둥근 모서리 15px */
+  font-size: 0.9rem;       /* 글자 크기 14.4px */
+  font-weight: 500;        /* 글자 두께 (미디움) */
+  display: inline-block;   /* 인라인 블록 요소 */
+  position: absolute;      /* 절대 위치 */
+  bottom: 1rem;            /* 하단에서 16px 떨어진 위치 */
+  right: 1rem;             /* 우측에서 16px 떨어진 위치 */
+}
+
+/* 레시피가 8개 미만일 때 보여주는 빈 카드 */
+.recipe-card.empty {
+  background: #f5f5f5;
+  border: 2px dashed #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+/* 빈 카드에 마우스 올렸을 때는 변화 없음 */
+.recipe-card.empty:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #ddd;
+}
+
+/* 빈 카드의 + 기호 스타일 */
+.empty-card-content span {
+  font-size: 2rem;
+  color: #ccc;
+  font-weight: 300;
+}
+
+/* 모달 창의 배경 오버레이 - 전체 화면을 덮는 반투명 배경 */
+.modal-overlay {
+  position: fixed;        /* 고정 위치 (스크롤해도 위치 변하지 않음) */
+  top: 0;                /* 상단 0px */
+  left: 0;               /* 좌측 0px */
+  right: 0;              /* 우측 0px */
+  bottom: 0;             /* 하단 0px (전체 화면 덮음) */
+  background: rgba(0, 0, 0, 0.5);  /* 반투명 검은색 배경 */
+  display: flex;         /* Flexbox 사용 */
+  align-items: center;   /* 수직 가운데 정렬 */
+  justify-content: center;  /* 수평 가운데 정렬 */
+  z-index: 1000;         /* 다른 요소들보다 위에 표시 */
+  padding: 1rem;         /* 내부 여백 16px */
+}
+
+/* 실제 모달 창의 내용이 들어가는 부분 */
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 모달 창 우상단의 X 버튼 */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* 닫기 버튼에 마우스 올렸을 때 효과 */
+.modal-close:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* 모달 창의 헤더 부분 (제목 영역) */
+.modal-header {
+  margin-bottom: 1.5rem;
+  padding-right: 2rem;
+}
+
+/* 모달 제목 스타일 */
+.modal-header h2 {
+  margin-right: -2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* 편집 모드에서 제목을 수정할 때 사용하는 입력 필드 */
+.edit-title-input,
+.add-title-input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid #ff9800;
+  padding: 0.5rem 0;
+  background: transparent;
+  color: #333;
+  outline: none;
+}
+
+/* 새 레시피 추가용 제목 입력 필드 */
+.add-title-input {
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+/* 새 레시피 제목 입력 필드에 포커스했을 때 */
+.add-title-input:focus {
+  border-bottom-color: #ff9800;
+}
+
+/* 모달 창의 본문 내용 부분 */
+.modal-body {
+  margin-bottom: 2rem;
+}
+
+/* 레시피의 각 항목 (추천이유, 재료, 조리법 등)을 감싸는 컨테이너 */
+.recipe-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 새 레시피 추가 모달용 중앙 정렬 항목 */
+.recipe-detail-item.centered {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 칼로리 입력 필드 위의 설명 텍스트 */
+.input-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* 레시피 항목 앞의 점(●) 표시 */
+.detail-dot {
+  color: #ff9800;
+  font-weight: bold;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* 레시피 항목의 실제 내용 부분 */
+.detail-content {
+  flex: 1;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* 편집용 및 추가용 텍스트 입력 영역 */
+.edit-textarea,
+.add-textarea {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* 텍스트 영역에 포커스했을 때 */
+.edit-textarea:focus,
+.add-textarea:focus {
+  border-color: #ff9800;
+}
+
+/* 큰 텍스트 영역 (조리법용) */
+.edit-textarea.large,
+.add-textarea.large {
+  min-height: 100px;
+}
+
+/* 칼로리 등 숫자 입력용 필드 */
+.add-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* 일반 입력 필드에 포커스했을 때 */
+.add-input:focus {
+  border-color: #ff9800;
+}
+
+/* 조리법을 단계별로 보여주는 리스트의 각 항목 */
+.instructions-list div {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* 모달 하단의 버튼들을 배치하는 컨테이너 */
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 편집 버튼과 저장 버튼 스타일 */
+.edit-btn,
+.save-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* 편집/저장 버튼에 마우스 올렸을 때 효과 */
+.edit-btn:hover,
+.save-btn:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+/* 레시피 삭제 버튼 - 밑줄 텍스트 스타일 */
+.delete-btn {
+  background: transparent;
+  color: #999;
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* 삭제 버튼에 마우스 올렸을 때 효과 */
+.delete-btn:hover {
+  color: #e53e3e;
+}
+
+/* 취소 버튼 - 테두리만 있는 버튼 스타일 */
+.cancel-btn {
+  background: transparent;
+  color: #666;
+  border: 2px solid #ddd;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 취소 버튼에 마우스 올렸을 때 효과 */
+.cancel-btn:hover {
+  border-color: #999;
+  color: #333;
+}
+
+/* 태블릿 사이즈 반응형 디자인 (768px 이하) */
+@media (max-width: 768px) {
+  .recipe-book-content {
+    padding: 1rem;
+    margin-top: 6vh;
+  }
+
+  .recipe-book-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recipe-book-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .recipe-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .recipe-card {
+    height: 120px;
+    padding: 1rem;
+  }
+
+  .recipe-card-content h3 {
+    font-size: 1rem;
+  }
+
+  .recipe-card-calories {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .modal-content {
+    margin: 1rem;
+    padding: 1.5rem;
+    max-height: 90vh;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .edit-btn,
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+/* 모바일 사이즈 반응형 디자인 (480px 이하) */
+@media (max-width: 480px) {
+  .recipe-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .recipe-card {
+    height: 100px;
+    padding: 0.8rem;
+  }
+
+  .recipe-card-content h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .recipe-card-calories {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+}

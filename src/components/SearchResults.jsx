@@ -1,5 +1,24 @@
 // src/components/SearchResults.jsx
 import React from 'react';
+import { getDatabase, ref, push, set } from 'firebase/database';
+import { getAuth } from 'firebase/auth';
+
+const saveFoodToToday = (food) => {
+  const db = getDatabase();
+  const auth = getAuth();
+  const user = auth.currentUser;
+  if (!user) return;
+
+  const today = new Date().toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric'
+  });
+
+  const foodRef = ref(db, `users/${user.uid}/consumed/${today}`);
+  const newFoodRef = push(foodRef);
+
+  set(newFoodRef, food);
+};
 
 /**
  * 검색 결과를 표시하는 컴포넌트
@@ -61,35 +80,30 @@ const SearchResults = ({ searchResults, showSearchResults, addFood, setShowAddMo
   }
 
   return (
-    <div style={styles.searchResults}>
-      {searchResults.length === 0 ? (
-        <div style={styles.noResults}>
-          <div>None</div>
-          <button 
-            style={styles.addManualButton}
-            onClick={() => setShowAddModal(true)}
-          >
-            Add by yourself
-          </button>
-        </div>
-      ) : (
-        searchResults.map(food => (
-          <div 
-            key={food.id} 
-            style={styles.searchResultItem} 
-            onClick={() => addFood(food)}
-            role="button"
-            tabIndex={0}
-            aria-label={`Add ${food.name} to consumed foods`}
-          >
-            <div style={styles.foodNameResult}>{food.name}</div>
-            <div style={styles.foodNutrition}>
-              {food.calories} kcal | Carbs {food.carbs}g | Fat {food.fat}g | Protein {food.protein}g
+    showSearchResults && (
+      <div style={styles.searchResults}>
+        {searchResults.length === 0 ? (
+          <div style={styles.noResults}>No results found.</div>
+        ) : (
+          searchResults.map((food, index) => (
+            <div
+              key={index}
+              style={styles.searchResultItem}
+              onClick={() => {
+                saveFoodToToday(food);
+                addFood(food);
+                //setShowAddModal(true);
+              }}
+            >
+              <div style={styles.foodNameResult}>{food.name}</div>
+              <div style={styles.foodNutrition}>
+                {food.calories} kcal | C:{food.carbs}g F:{food.fat}g P:{food.protein}g
+              </div>
             </div>
-          </div>
-        ))
-      )}
-    </div>
+          ))
+        )}
+      </div>
+    )
   );
 };
 

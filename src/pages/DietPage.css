@@ -1,27 +1,333 @@
 /* src/pages/DietPage.css */
-/* 식단 추전 기능 페이지 스타일, 로그인하면 가장 먼저 보이는 화면 */
+/* 식단 추천 기능 페이지 스타일, 로그인하면 가장 먼저 보이는 화면 */
 
-/* Diet 페이지의 메인 컨테이너 */
+/* Diet 페이지의 메인 컨테이너 - 전체 화면 높이로 세로 배치 */
 .diet-page-container {
-  display: flex;                /* flexbox 레이아웃 사용 */
-  flex-direction: column;       /* 자식 요소들을 세로로 배치 */
-  min-height: 100vh;            /* 페이지가 최소한 전체 화면 높이를 차지하도록 설정 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
-/* Diet 페이지의 콘텐츠 영역 */
+/* Diet 페이지의 콘텐츠 영역 - 중앙 정렬로 배치 */
 .diet-page-content {
-  flex: 1;                      /* 콘텐츠가 남은 공간을 차지하도록 설정 */
-  padding: 2rem;                /* 콘텐츠 주변에 여백 추가 */
-  display: flex;                /* 콘텐츠 내부에서 flexbox 사용 */
-  flex-direction: column;       /* 자식 요소들을 세로로 배치 */
-  align-items: center;          /* 콘텐츠를 수평으로 가운데 정렬 */
-  justify-content: center;      /* 콘텐츠를 수직으로 가운데 정렬 */
-  margin-top: 15vh;              /* 헤더 높이를 고려한 상단 여백 추가 */
+  flex: 1;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2vh;
+  padding-top: 0.5rem;
 }
 
 /* Diet 페이지의 제목 스타일 */
 .diet-page-content h1 {
-  margin-bottom: 2rem;           /* 제목 아래에 여백 추가 */
-  font-size: 2rem;               /* 글씨 크기 설정 */
-  color: #333;                   /* 텍스트 색상은 어두운 회색 */
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 식단 보기 버튼 - 주황색 배경에 hover 효과 */
+.show-meal-plan-btn {
+  background: #ff9800;        /* 주황색 배경 */
+  color: white;               /* 흰색 글자 */
+  border: none;               /* 테두리 제거 */
+  padding: 1rem 2rem;         /* 내부 여백 */
+  border-radius: 25px;        /* 둥근 모서리 */
+  font-size: 1.1rem;          /* 글자 크기 */
+  font-weight: 500;           /* 글자 두께 */
+  cursor: pointer;            /* 마우스 올렸을 때 손가락 모양 */
+  transition: all 0.3s ease;  /* 모든 속성 변화에 애니메이션 */
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);  /* 그림자 효과 */
+  margin-top: 1rem;           /* 상단 여백 */
+}
+
+/* 식단 보기 버튼에 마우스 올렸을 때 효과 */
+.show-meal-plan-btn:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+/* 데이터 로딩 중일 때 보여주는 텍스트 스타일 */
+.loading {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* 식사 카드 캐러셀 컨테이너 - 3D 원근감과 중앙 정렬 */
+.meal-carousel {
+  display: flex;             /* Flexbox 사용 */
+  justify-content: center;   /* 수평 가운데 정렬 */
+  align-items: center;       /* 수직 가운데 정렬 */
+  gap: 1rem;                /* 카드 간 간격 */
+  perspective: 1200px;      /* 3D 원근감 설정 */
+  height: 410px;            /* 고정 높이 */
+  position: relative;       /* 자식 요소의 절대위치 기준점 */
+  width: 100%;              /* 전체 너비 */
+  max-width: 800px;         /* 최대 너비 제한 */
+}
+
+/* 기본 식사 카드 스타일 - 3D 변환과 애니메이션 적용 */
+.meal-card {
+  background: white;          /* 흰색 배경 */
+  border-radius: 12px;        /* 둥근 모서리 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
+  padding: 1rem;              /* 내부 여백 */
+  cursor: pointer;            /* 마우스 올렸을 때 손가락 모양 */
+  transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);  /* 부드러운 애니메이션 */
+  border: 2px solid transparent;  /* 투명한 테두리 */
+  position: relative;         /* 자식 요소의 절대위치 기준점 */
+  overflow: hidden;           /* 넘치는 내용 숨김 */
+  min-height: 220px;          /* 최소 높이 */
+  display: flex;              /* Flexbox 사용 */
+  flex-direction: column;     /* 세로 방향 배치 */
+  align-items: center;        /* 가운데 정렬 */
+}
+
+/* 활성화된 카드 (가운데 위치) - 가장 크고 강조된 상태 */
+.meal-card.active {
+  width: 250px;              /* 너비 250px */
+  height: 410px;             /* 높이 410px */
+  transform: scale(1.0) rotateY(0deg);  /* 크기 1배, 회전 없음 */
+  box-shadow: 0 12px 30px rgba(255, 165, 0, 0.2);  /* 주황색 그림자 */
+  border-color: #ff9800;     /* 주황색 테두리 */
+  z-index: 10;               /* 다른 카드보다 위에 표시 */
+}
+
+/* 사이드 카드 (양옆 위치) - 작고 반투명한 상태 */
+.meal-card.side {
+  width: 130px;              /* 너비 130px */
+  height: 180px;             /* 높이 180px */
+  opacity: 0.7;              /* 70% 투명도 */
+  z-index: 5;                /* 활성 카드보다 뒤에 표시 */
+}
+
+/* 왼쪽 사이드 카드 - 왼쪽으로 회전 및 이동 */
+.meal-card.side.left {
+  transform: scale(0.8) rotateY(15deg) translateX(-50px);
+}
+
+/* 오른쪽 사이드 카드 - 오른쪽으로 회전 및 이동 */
+.meal-card.side.right {
+  transform: scale(0.8) rotateY(-15deg) translateX(50px);
+}
+
+/* 일반 카드에 마우스 올렸을 때 효과 */
+.meal-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 활성 카드에 마우스 올렸을 때 효과 */
+.meal-card.active:hover {
+  transform: scale(1.15) rotateY(0deg);
+}
+
+/* 카드 제목 스타일 */
+.meal-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* 식사 미리보기 (사이드 카드용) - 간단한 텍스트만 표시 */
+.meal-preview {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+/* 식사 세부 정보 컨테이너 - 활성 카드에서만 표시 */
+.meal-details {
+  width: 100%;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 식사 제목 스타일 */
+.meal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+/* 칼로리 정보 - 주황색 배경의 작은 태그 형태 */
+.meal-calories {
+  background: #ff9800;       /* 주황색 배경 */
+  color: white;              /* 흰색 글자 */
+  padding: 0.2rem 0.6rem;    /* 내부 여백 */
+  border-radius: 12px;       /* 둥근 모서리 */
+  font-size: 0.75rem;        /* 작은 글자 크기 */
+  font-weight: 500;          /* 글자 두께 */
+  display: inline-block;     /* 인라인 블록 요소 */
+  margin-bottom: 1.5rem;     /* 하단 여백 */
+  align-self: center;        /* 가운데 정렬 */
+}
+
+/* 추천 이유, 재료, 조리법 공통 스타일 - 점 표시와 함께 나열 */
+.meal-reason,
+.meal-ingredients,
+.meal-instructions {
+  margin-bottom: 0.6rem;     /* 하단 여백 */
+  display: flex;             /* Flexbox 사용 */
+  align-items: flex-start;   /* 상단 정렬 */
+  gap: 0.3rem;              /* 요소 간 간격 */
+  font-size: 0.7rem;        /* 작은 글자 크기 */
+  line-height: 1.2;         /* 줄 간격 */
+}
+
+/* 점 스타일 - 각 항목 앞의 주황색 점 표시 */
+.reason-dot,
+.ingredients-dot,
+.instructions-dot {
+  color: #ff9800;            /* 주황색 */
+  font-weight: bold;         /* 굵은 글자 */
+  margin-top: 0.1rem;        /* 상단 여백 (텍스트와 정렬) */
+  flex-shrink: 0;            /* 크기 축소 방지 */
+}
+
+/* 조리법 리스트 - 여러 단계를 세로로 나열 */
+.instructions-list {
+  flex: 1;
+}
+
+.instructions-list div {
+  margin-bottom: 0.3rem;
+}
+
+/* 액션 버튼 컨테이너 - 저장/레시피북 버튼들을 가로로 배치 */
+.meal-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.7rem;
+  justify-content: center;
+}
+
+/* 저장 버튼 - 주황색 배경의 작은 버튼 */
+.save-btn {
+  background: #ff9800;       /* 주황색 배경 */
+  color: white;              /* 흰색 글자 */
+  border: none;              /* 테두리 제거 */
+  padding: 0.4rem 0.8rem;    /* 내부 여백 */
+  border-radius: 15px;       /* 둥근 모서리 */
+  font-size: 0.5rem;         /* 작은 글자 크기 */
+  font-weight: 500;          /* 글자 두께 */
+  cursor: pointer;           /* 마우스 올렸을 때 손가락 모양 */
+  transition: all 0.3s ease; /* 모든 속성 변화에 애니메이션 */
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);  /* 그림자 효과 */
+}
+
+/* 저장 버튼에 마우스 올렸을 때 효과 */
+.save-btn:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+/* 레시피북 버튼 - 테두리만 있는 투명 버튼 */
+.recipe-book-btn {
+  background: transparent;   /* 투명 배경 */
+  color: #ff9800;           /* 주황색 글자 */
+  border: 2px solid #ff9800; /* 주황색 테두리 */
+  padding: 0.4rem 0.8rem;   /* 내부 여백 */
+  border-radius: 20px;      /* 둥근 모서리 */
+  font-size: 0.7rem;        /* 작은 글자 크기 */
+  font-weight: 500;         /* 글자 두께 */
+  cursor: pointer;          /* 마우스 올렸을 때 손가락 모양 */
+  transition: all 0.3s ease; /* 모든 속성 변화에 애니메이션 */
+  text-decoration: none;    /* 텍스트 장식 제거 */
+  display: inline-block;    /* 인라인 블록 요소 */
+  text-align: center;       /* 텍스트 가운데 정렬 */
+}
+
+/* 레시피북 버튼에 마우스 올렸을 때 효과 */
+.recipe-book-btn:hover {
+  background: #ff9800;      /* 주황색 배경으로 변경 */
+  color: white;             /* 흰색 글자로 변경 */
+  transform: translateY(-2px); /* 위로 2px 이동 */
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.3); /* 그림자 효과 */
+}
+
+/* 태블릿 사이즈 반응형 디자인 (768px 이하) */
+@media (max-width: 768px) {
+  /* 캐러셀을 세로 배치로 변경 */
+  .meal-carousel {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+  
+  /* 모든 카드를 동일한 크기로 표시 */
+  .meal-card {
+    width: 90% !important;
+    height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* 활성 카드는 테두리 색상으로만 구분 */
+  .meal-card.active {
+    border-color: #ff9800;
+    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.2);
+  }
+  
+  /* 콘텐츠 영역 여백 조정 */
+  .diet-page-content {
+    padding: 1rem;
+    margin-top: 5vh;
+  }
+  
+  /* 제목 크기 축소 */
+  .diet-page-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* 버튼들을 세로로 배치 */
+  .meal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* 버튼 너비를 100%로 확장 */
+  .save-btn,
+  .recipe-book-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 모바일 사이즈 반응형 디자인 (480px 이하) */
+@media (max-width: 480px) {
+  /* 카드 여백과 높이 조정 */
+  .meal-card {
+    padding: 1.5rem;
+    min-height: 300px;
+  }
+  
+  /* 제목 크기 조정 */
+  .meal-title {
+    font-size: 1.1rem;
+  }
+  
+  /* 세부 정보 글자 크기 조정 */
+  .meal-reason,
+  .meal-ingredients,
+  .meal-instructions {
+    font-size: 0.8rem;
+  }
 }

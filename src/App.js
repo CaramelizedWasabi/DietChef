@@ -20,6 +20,8 @@ import NutritionAnalysis from './pages/NutritionAnalysis'; //NutritionAnalysis �
 import FoodInfoPage from './pages/FoodInfoPage';
 import FoodDetailPage from './pages/FoodDetailPage';
 import MyMealPlanPage from './pages/MyMealPlanPage';
+import ProgressTracker from './pages/ProgressTracker'; //ProgressTracker 페이지
+import RecipeBook from './pages/RecipeBook'; 
 
 
 function App() {
@@ -165,12 +167,23 @@ function App() {
               </ProtectedRoute>
             } 
           />
+          <Route 
+            path="/recipe-book" 
+            element={<RecipeBook />} 
+          />
           {/*영양 관리 페이지 내 금일 영양 정보 이동 페이지*/}
           <Route path="/nutrition-analysis" element={
             <>
               <DietHeader />
               <NutritionAnalysis />
             </>
+          } />
+          {/* 통계 관련 페이지*/}
+            <Route path="/progress" element={
+             <>
+               <DietHeader /> 
+               <ProgressTracker />
+             </>
           } />
           {/* 성공 페이지로 리다이렉트 (다이어트 페이지로 이동) */}
           <Route path="/success" element={<Navigate to="/dietpage" replace />} />
