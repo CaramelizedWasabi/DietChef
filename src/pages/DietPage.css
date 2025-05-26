@@ -93,7 +93,7 @@
 /* 활성화된 카드 (가운데 위치) - 가장 크고 강조된 상태 */
 .meal-card.active {
   width: 250px;              /* 너비 250px */
-  height: 390px;             /* 높이 390px */
+  height: 410px;             /* 높이 410px */
   transform: scale(1.0) rotateY(0deg);  /* 크기 1배, 회전 없음 */
   box-shadow: 0 12px 30px rgba(255, 165, 0, 0.2);  /* 주황색 그림자 */
   border-color: #ff9800;     /* 주황색 테두리 */
