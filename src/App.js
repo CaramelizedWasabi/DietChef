@@ -17,8 +17,12 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'; // Firebase 인증 
 import Nutrition from './pages/Nutrition'; //Nutrition main page
 import DietHeader from './components/DietHeader'; //Test 겸용 DietHeader
 import NutritionAnalysis from './pages/NutritionAnalysis'; //NutritionAnalysis 페이지
+import FoodInfoPage from './pages/FoodInfoPage';
+import FoodDetailPage from './pages/FoodDetailPage';
+import MyMealPlanPage from './pages/MyMealPlanPage';
 import ProgressTracker from './pages/ProgressTracker'; //ProgressTracker 페이지
 import RecipeBook from './pages/RecipeBook'; 
+
 
 function App() {
   // 모달 상태 관리 (각 모달의 열림/닫힘 상태)
@@ -134,6 +138,9 @@ function App() {
           } />
           {/* 기본 페이지 (메인 페이지) */}
           <Route path="/" element={<MainPage />} />
+          <Route path="/foodinfo" element={<FoodInfoPage />} />
+          <Route path="/food-detail" element={<FoodDetailPage />} />
+          <Route path="/meal-plan" element={<MyMealPlanPage />} />
           {/* 인증이 필요한 페이지들 (ProtectedRoute로 감싸서 인증된 사용자만 접근 가능) */}
           <Route 
             path="/complete-profile" 
@@ -142,6 +149,7 @@ function App() {
                 <CompleteProfile /> 
               </ProtectedRoute>
             } 
+            
           />
           <Route 
             path="/survey" 
