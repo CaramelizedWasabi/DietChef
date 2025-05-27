@@ -68,7 +68,7 @@ const styles = {
     textAlign: 'center',
     paddingTop: '0px',
     paddingBottom: '40px',
-    marginTop: '-150px',
+    marginTop: '-200px',
   },
   card: {
     margin: '20px auto',
