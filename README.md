@@ -117,5 +117,6 @@ npm start
 
 If you have any questions or issues, feel free to reach out:
 
-- 📧 Email: [yeoni030915@gmail.com](mailto:yeoni030915@gmail.com)  
+- 📧 Email: [yeoni030915@gmail.com](mailto:yeoni030915@gmail.com)
+- 📧 Email: [rhatnsdj@gmail.com]
 - 📌 Or leave a message via [GitHub Issues](https://github.com/RyuYeoni/DietChef/issues)
